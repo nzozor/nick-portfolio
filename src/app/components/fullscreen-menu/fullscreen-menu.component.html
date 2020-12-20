@@ -1,0 +1,27 @@
+<!-- Fullscreen Menu -->
+<div class="fm-wrapper" [class.fm-show]="isMenuBarOpen">
+  <div class="container text-center">
+    <div class="middle">
+      <ul class="fm list-inline">
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+        <li><a href="#">Menu item</a></li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <ul class="list-inline margin-bottom-10">
+        <li><a href="#" ><fa-icon [icon]="faFacebookF"></fa-icon></a></li>
+        <li><a href="#"><fa-icon [icon]="faTwitter"></fa-icon></a></li>
+        <li><a href="#"><fa-icon [icon]="faLinkedinIn"></fa-icon></a></li>
+        <li><a href="#"><fa-icon [icon]="faInstagramSquare"></fa-icon></a></li>
+      </ul>
+      <p>© 2020 FlaTheme, All Rights Reserved.</p>
+    </div>
+    <!-- Close Button -->
+    <button class="fm-close" (click)=toggleMenu()>
+      <span></span>
+    </button>
+  </div><!-- end container -->
+</div>
+<!-- end Header -->

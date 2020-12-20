@@ -1,0 +1,25 @@
+<!-- You can now use your library component in app.component.html -->
+<div class="container">
+  <button class="btn-next"(click)="next()"><i class="arrow right"></i></button>
+  <ngx-slick-carousel class="carousel"
+   #slickModal="slick-carousel"
+   [config]="slideConfig"
+   (init)="slickInit($event)"
+   (breakpoint)="breakpoint($event)"
+   (afterChange)="afterChange($event)"
+   (beforeChange)="beforeChange($event)"
+   (swipe)="swipe()"
+   >
+
+  <div class='slider-panel' ngxSlickItem  *ngFor="let review of reviews ">
+      <div>
+        <div class="quote">"{{review.quote}}"</div>
+        <div class="name">{{review.reviewerName}}</div>
+        <!-- <div class="stars">
+          <mat-icon *ngFor="let star of stars">star</mat-icon>
+        </div> -->
+      </div>
+    </div>
+  </ngx-slick-carousel>
+  <button class="btn-prev"(click)="prev()"><i class="arrow left"></i></button>
+</div>
