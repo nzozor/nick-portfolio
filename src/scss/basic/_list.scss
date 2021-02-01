@@ -21,7 +21,7 @@ ul {
 	&[class*=' list-'], &[class^='list-'] {
 		padding: 0;
 	}
-	&.list-unstyled, 
+	&.list-unstyled,
 	&.list-dash {
 		li {
 			list-style-type: none;
@@ -54,7 +54,7 @@ ul {
 	&.list-inline-lg {
 		margin-right: -14px;
 		margin-left: -14px;
-		li { 
+		li {
 			padding: 0 14px;
 		}
 	}
@@ -68,7 +68,7 @@ ul {
 	&.list-inline-sm {
 		margin-right: -3px;
 		margin-left: -3px;
-		li { 
+		li {
 			padding: 0 3px;
 		}
 	}
@@ -81,8 +81,8 @@ ul {
 	&.list-inline-vbar {
 		li { &:after { content: '|'; } }
 	}
-	&.list-inline-dash, 
-	&.list-inline-slash, 
+	&.list-inline-dash,
+	&.list-inline-slash,
 	&.list-inline-vbar {
 		li {
 			&:after {
@@ -131,7 +131,7 @@ ul {
 		&.list-inline-lg {
 			margin-right: -12px;
 			margin-left: -12px;
-			li { 
+			li {
 				padding: 0 12px;
 			}
 		}
@@ -145,7 +145,7 @@ ul {
 		&.list-inline-sm {
 			margin-right: -2px;
 			margin-left: -2px;
-			li { 
+			li {
 				padding: 0 2px;
 			}
 		}

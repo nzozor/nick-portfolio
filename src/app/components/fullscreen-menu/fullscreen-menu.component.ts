@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faFacebookF, faInstagramSquare, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'benoldi-fullscreen-menu',
@@ -11,7 +11,7 @@ export class FullscreenMenuComponent implements OnInit {
   @Input() isMenuBarOpen: boolean = false;
   faFacebookF = faFacebookF;
   faTwitter = faTwitter;
-  faInstagramSquare = faInstagramSquare;
+  faInstagramSquare = faInstagram;
   faLinkedinIn = faLinkedinIn;
 
   constructor() { }

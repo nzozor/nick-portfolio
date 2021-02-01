@@ -4,7 +4,7 @@
   width: 500px;
 
   >div {
-    padding: 72px 0;
+    // padding: 0;
 
     @media (max-width: 767px) {
       padding: 50px 0;
@@ -13,8 +13,12 @@
 }
 
 .container {
-  max-width: 1000px;
-  ;
+  max-width: 1140px;
+
+  @media (min-width: 768px) {
+    margin-top: 140px;
+  }
+
 }
 
 .drag {
@@ -83,7 +87,9 @@
   }
 }
 
-.slider-panel {
+.slider-panel,
+.carousel-cell {
+  display: none;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -96,7 +102,7 @@
   // border: 1px solid gray;
   outline: none;
   padding: 22px;
-  font-family: 'Nunito Sans';
+  font-family: Calibre;
   font-size: 15px;
   transition: all 0.5s;
   font-weight: 300;
@@ -135,33 +141,10 @@
   @media (min-width: 700px) {}
 }
 
-// .reviews {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   .mat-button {
-//     line-height: 0;
-//     min-width: 0;
-//     padding: 10px 20px;
-//     border-radius: 0;
-//     display: none;
-//     @media (min-width: 992px ) {
-
-//       display: initial;
-//       margin: 10px;
-
-//     }
-
-//     @media  ( min-width: 1024px ) {
-//       margin: 40px;
-//     }
-//   }
-// }
-
 .carousel {
   touch-action: auto !important;
   -ms-touch-action: auto !important;
+  // margin-top: 140px;
 
   ::ng-deep {
     .slick-list {
@@ -194,30 +177,30 @@
     }
 
     li button::before {
-      width: 8px;
-      height: 8px;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       border: 1px solid;
       content: "";
-      left: 4px;
-      top: 4px;
+      left: 6px;
+      top: 6px;
       color: black;
       position: absolute;
       background: black;
-     }
+    }
 
     .slick-track {
       transition: all .5s;
     }
 
     .slick-slide {
-      font-size: 21px;
+      font-size: 24px;
       max-width: 300px;
       margin: 0 25px;
       transition: all .5s;
 
       @media only screen and (min-width: 992px) {
-        max-width: 960px;
+        max-width: 1000px;
       }
     }
   }
@@ -232,7 +215,7 @@
   bottom: 0;
   text-align: center;
   width: 40px;
-  z-index: 1;
+  z-index: 80;
   margin: 14px;
 }
 
@@ -260,4 +243,96 @@
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+carousel {
+  width: calc(100% - 50px);
+}
+
+.carousel-cell {
+  @media (max-width: 768px) {
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  display: flex;
+  justify-content: center;
+  padding: 22px;
+  font-family: Calibre;
+  font-size: 15px;
+  transition: all 0.5s;
+  font-weight: 500;
+  line-height: 1.9em;
+
+  >div {
+    max-width: 60%;
+    text-align: center;
+  }
+
+
+  .quote {
+    font-family: Calibre-Light;
+    font-size: 22px;
+    margin-bottom: 13px;
+    color: black;
+  }
+
+  .name {
+    font-family: degular;
+    color: black;
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+}
+
+#carousel {
+  width: 100%;
+  carousel {
+    width: 100%;
+    @media (max-width: 768px) {
+      min-height: 300px;
+    }
+
+    ::ng-deep {
+      .carousel-dots {
+        bottom: -40px;
+        display: flex;
+        justify-content: center;
+        max-width: 1140px;
+        .carousel-dot-active {
+          background-color: black!important;
+        }
+
+        ::ng-deep .carousel-dot {
+          border: none;
+          background-color: #bababa;
+          border-radius: 100px;
+          display: inline-block;
+          height: 6px;
+          margin: 10px;
+          width: 6px;
+        }
+      }
+
+      .carousel-arrows {
+        .carousel-arrow {
+          background-color: transparent;
+          box-shadow: none;
+          cursor: pointer;
+          height: 40px;
+          margin-top: -20px;
+          position: absolute;
+          top: 50%;
+          width: 40px;
+          z-index: 10;
+        }
+      }
+    }
+  }
 }

@@ -427,8 +427,8 @@ a, button {
 //
 // Text Buttons //
 //
-.button-text-1, 
-.button-text-2, 
+.button-text-1,
+.button-text-2,
 .button-text-3 {
 	position: relative;
 	display: inline-block;
@@ -551,8 +551,8 @@ a, button {
 }
 
 div[class^='bg-dark'], div[class*=' bg-dark'], .bg-black {
-	.button-text-1, 
-	.button-text-2, 
+	.button-text-1,
+	.button-text-2,
 	.button-text-3 {
 		color: $color-white-08;
 		&:hover {

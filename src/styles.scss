@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~bootstrap/dist/css/bootstrap.css";
+@import "https://use.typekit.net/ytk1pbi.css";
 @import "./scss/main";
 
+@font-face {
+  font-family: 'Calibre';
+  src: url('./assets/font-calibre/Calibre-Regular.woff'); /* IE9 Compat Modes */
+}
 
-
-
-
+@font-face {
+  font-family: 'Calibre-Light';
+  src: url('./assets/font-calibre/Calibre-Light.woff'); /* IE9 Compat Modes */
+}

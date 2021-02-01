@@ -1,91 +1,26 @@
-
-				<!-- Portfolio section -->
-				<div class="portfolio-container">
-					<div class="row col-spacing-0 portfolio-grid portfolio-title-overlay hover-style-1">
-						<!-- Portfolio Item -->
-						<div class="col-12 col-md-4 portfolio-item">
-							<a href="#">
-								<div class="portfolio-img">
-									<img src="../assets/images/col-1.jpg" alt="">
-								</div>
-								<div class="portfolio-hover">
-									<div class="portfolio-hover-box">
-										<h3 class="font-weight-normal">Project Title</h3>
-										<span class="font-small font-family-secondary font-weight-medium uppercase">Category</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Portfolio Item -->
-						<div class="col-12 col-md-4 portfolio-item">
-							<a href="#">
-								<div class="portfolio-img">
-									<img src="../assets/images/col-1.jpg" alt="">
-								</div>
-								<div class="portfolio-hover">
-									<div class="portfolio-hover-box">
-										<h3 class="font-weight-normal">Project Title</h3>
-										<span class="font-small font-family-secondary font-weight-medium uppercase">Category</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Portfolio Item -->
-						<div class="col-12 col-md-4 portfolio-item">
-							<a href="#">
-								<div class="portfolio-img">
-									<img src="../assets/images/col-1.jpg" alt="">
-								</div>
-								<div class="portfolio-hover">
-									<div class="portfolio-hover-box">
-										<h3 class="font-weight-normal">Project Title</h3>
-										<span class="font-small font-family-secondary font-weight-medium uppercase">Category</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Portfolio Item -->
-						<div class="col-12 col-md-4 portfolio-item">
-							<a href="#">
-								<div class="portfolio-img">
-									<img src="../assets/images/col-1.jpg" alt="">
-								</div>
-								<div class="portfolio-hover">
-									<div class="portfolio-hover-box">
-										<h3 class="font-weight-normal">Project Title</h3>
-										<span class="font-small font-family-secondary font-weight-medium uppercase">Category</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Portfolio Item -->
-						<div class="col-12 col-md-4 portfolio-item">
-							<a href="#">
-								<div class="portfolio-img">
-									<img src="../assets/images/col-1.jpg" alt="">
-								</div>
-								<div class="portfolio-hover">
-									<div class="portfolio-hover-box">
-										<h3 class="font-weight-normal">Project Title</h3>
-										<span class="font-small font-family-secondary font-weight-medium uppercase">Category</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Portfolio Item -->
-						<div class="col-12 col-md-4 portfolio-item">
-							<a href="#">
-								<div class="portfolio-img">
-									<img src="../assets/images/col-1.jpg" alt="">
-								</div>
-								<div class="portfolio-hover">
-									<div class="portfolio-hover-box">
-										<h3 class="font-weight-normal">Project Title</h3>
-										<span class="font-small font-family-secondary font-weight-medium uppercase">Category</span>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div><!-- end container-fluid -->
-				<!-- end Portfolio section -->
+<!-- Portfolio section -->
+<div class="portfolio-container">
+  <div
+    class="row col-spacing-0 portfolio-grid portfolio-title-overlay hover-style-1"
+  >
+    <!-- Portfolio Item -->
+    <div class="col-sm-12 col-md-6 col-lg-4 portfolio-item" *ngFor="let project of projects">
+      <a href="#">
+        <div class="portfolio-img">
+          <img src="../assets/images/col-1.jpg" alt="" />
+        </div>
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-box">
+            <h3 class="font-weight-normal">Project Title</h3>
+            <span
+              class="font-small font-family-secondary font-weight-medium uppercase"
+              >Category</span
+            >
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- end container-fluid -->
+<!-- end Portfolio section -->

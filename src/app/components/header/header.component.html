@@ -1,12 +1,11 @@
-<div class="header header-xl absolute-light">
+<div class="header">
   <div class="container-fluid">
     <div class="logo">
-      <h4 class="uppercase letter-spacing-2"><a href="#">Elsa Benoldi</a></h4>
-
+      <h4><a href="#"><img src="../../../assets/images/elsa-benoldi-logo.svg" alt=""></a></h4>
     </div>
-    <button class="fm-toggle" (click)=toggleMenu()>
+    <button class="toggle-menu" (click)=toggleMenu()>
       <span></span>
     </button>
-  </div><!-- end container -->
+  </div>
 </div>
 <benoldi-fullscreen-menu [isMenuBarOpen]="isMenuBarOpen" (menuBarToggle)="toggleMenu()"></benoldi-fullscreen-menu>

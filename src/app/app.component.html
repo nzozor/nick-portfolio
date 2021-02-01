@@ -1,8 +1,17 @@
+<div id="scroll-top-anchor"></div>
 <div class="wrapper">
-  <benoldi-header></benoldi-header>
+
+  <benoldi-header ></benoldi-header>
   <div>
     <benoldi-hero-section></benoldi-hero-section>
     <benoldi-portfolio-section></benoldi-portfolio-section>
     <benoldi-reviews></benoldi-reviews>
+    <benoldi-services></benoldi-services>
+    <benoldi-call-to-action></benoldi-call-to-action>
+    <benoldi-footer></benoldi-footer>
+
+    <div class="scrolltotop" (click)="onClickScroll('scroll-top-anchor')" [class.scrolltotop-show]="showScrollTopButton">
+      <a class="button-circle button-circle-sm button-circle-dark" href="#"><fa-icon [icon]="faArrowUp"></fa-icon></a>
+    </div>
   </div>
 </div>

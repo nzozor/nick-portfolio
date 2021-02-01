@@ -9,7 +9,7 @@ export class ReviewsComponent implements OnInit {
   @ViewChild('sliderEl') sliderEl: ElementRef;
   @ViewChild('start') start: ElementRef;
   @ViewChild('slickModal') slickModal: any;
-
+  @ViewChild('carousel') myCarousel: any;
   slides = [
     {img: 'http://placehold.it/350x150/000000'},
     {img: 'http://placehold.it/350x150/111111'},
@@ -26,9 +26,9 @@ export class ReviewsComponent implements OnInit {
   sliderWidth = 0;
   activeSliderWidth = 0;
 
-  sliderPanelstyle = {
-    width: '250px'
-  };
+  // sliderPanelstyle = {
+  //   width: '250px'
+  // };
 
   minHeight = 373;
   marginBetweenSlides = 10;
@@ -96,7 +96,7 @@ export class ReviewsComponent implements OnInit {
           arrows: true,
           centerMode: true,
           variableWidth: true,
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },
       {
@@ -139,15 +139,13 @@ export class ReviewsComponent implements OnInit {
 
   slickGoTo(e: any): void {
     this.slickModal.slickGoTo(4);
-    console.log(e);
-    console.log(this.slickModal);
   }
 
   next(): void {
-    this.slickModal.slickNext();
+    this.myCarousel.next();
   }
 
   prev(): void {
-    this.slickModal.slickPrev();
+    this.myCarousel.prev();
   }
 }

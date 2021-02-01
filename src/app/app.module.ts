@@ -10,6 +10,11 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { PortfolioSectionComponent } from './components/portfolio-section/portfolio-section.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ServicesComponent } from './components/services/services.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { InitialsComponent } from './components/initials/initials.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,18 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     FullscreenMenuComponent,
     HeroSectionComponent,
     PortfolioSectionComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    ServicesComponent,
+    CallToActionComponent,
+    FooterComponent,
+    InitialsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
