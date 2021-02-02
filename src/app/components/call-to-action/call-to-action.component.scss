@@ -23,5 +23,9 @@
   font-size: inherit;
   font-size: 18px;
   font-weight: 600;
-  &::before { background-color: #ffffff80;}
+  // &::before { background-color: #ffffff80;}
+  text-decoration: none;
+  background: none;
+  border: 1px solid #ffffff80;
+  color: #ffffff80;
 }

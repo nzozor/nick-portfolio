@@ -1,18 +1,23 @@
 @import "../../../scss/helpers/variables";
+@import "../../../scss/helpers/mixins";
 
 .container {
-  // max-width: 60%;
   margin: 140px auto;
 
   .row {
     justify-content: center;
 
+    @include breakpoint-above(md) {
+      display: flex;
+    }
+
     .service-item {
       border: 1px solid$elsa-gray;
-      max-width: 350px;
       min-height: 300px;
+      margin-bottom: 30px;
 
-      @media (min-width: 992px) {
+      @include breakpoint-above(md) {
+        max-width: 32%px;
         margin-right: 30px;
 
         &:last-of-type {
@@ -35,14 +40,13 @@
         font-weight: 500;
       }
 
-      > div {
+      >div {
         font-family: Calibre-Light;
         text-align: center;
         margin: 20px 10px;
-        font-size: 19px ;
+        font-size: 19px;
         line-height: 23px;
       }
     }
-
   }
 }

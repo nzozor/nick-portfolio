@@ -1,11 +1,11 @@
+@import "../../../scss/helpers/mixins";
+
 :host {
   position: relative;
   height: 100%;
   width: 500px;
 
   >div {
-    // padding: 0;
-
     @media (max-width: 767px) {
       padding: 50px 0;
     }
@@ -13,55 +13,13 @@
 }
 
 .container {
-  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
 
-  @media (min-width: 768px) {
+  @include breakpoint-above(md) {
     margin-top: 140px;
   }
-
 }
-
-.drag {
-  align-items: center;
-  bottom: 0;
-  color: #ccc;
-  display: flex;
-  font: 700 24px/1 sans-serif;
-  // height: 500px;
-  left: 0;
-  justify-content: center;
-  right: 0;
-  top: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 100%;
-  background-color: black;
-}
-
-.start {
-  background-color: red;
-  display: none;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 1px;
-}
-
-.start.is-showing {
-  display: block;
-}
-
-// .slider {
-//   display: flex;
-//   align-items: center;
-//   min-height: 375px;
-
-//   &.is-animating {
-//     transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1);
-//   }
-// }
 
 .slider-pagination {
   bottom: 6.25%;
@@ -87,128 +45,10 @@
   }
 }
 
-.slider-panel,
-.carousel-cell {
-  display: none;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  margin: 10px;
-  // height: 250px;
-  // border: 1px solid gray;
-  outline: none;
-  padding: 22px;
-  font-family: Calibre;
-  font-size: 15px;
-  transition: all 0.5s;
-  font-weight: 300;
-  // opacity: 0.65;
-
-  .quote {
-    margin-bottom: 13px;
-    color: gray;
-  }
-
-  .name {
-    color: gray;
-    margin-bottom: 15px;
-  }
-
-  &.active-panel {
-    transform: scale(1.3);
-    margin: 0 3%;
-    opacity: 1;
-  }
-}
-
-.stars {
-  mat-icon {
-    color: gray;
-    font-size: 30px;
-    margin: 0 5px;
-  }
-}
-
-.has-slider {
-  // overflow: hidden;
-  position: relative;
-  width: 100%;
-
-  @media (min-width: 700px) {}
-}
-
-.carousel {
-  touch-action: auto !important;
-  -ms-touch-action: auto !important;
-  // margin-top: 140px;
-
-  ::ng-deep {
-    .slick-list {
-      cursor: grab;
-      margin: 0 auto;
-      // height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      @media only screen and (min-width: 600px) {
-        max-width: 100%;
-        height: 250px;
-
-      }
-    }
-
-    li.slick-active {
-
-      &::before {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 1px solid;
-        content: "";
-        position: absolute;
-        left: -2px;
-        top: -2px;
-      }
-    }
-
-    li button::before {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      border: 1px solid;
-      content: "";
-      left: 6px;
-      top: 6px;
-      color: black;
-      position: absolute;
-      background: black;
-    }
-
-    .slick-track {
-      transition: all .5s;
-    }
-
-    .slick-slide {
-      font-size: 24px;
-      max-width: 300px;
-      margin: 0 25px;
-      transition: all .5s;
-
-      @media only screen and (min-width: 992px) {
-        max-width: 1000px;
-      }
-    }
-  }
-}
 
 .btn-prev,
 .btn-next {
-  position: absolute;
+  // position: absolute;
   margin-top: auto;
   margin-bottom: auto;
   top: 0;
@@ -216,7 +56,6 @@
   text-align: center;
   width: 40px;
   z-index: 80;
-  margin: 14px;
 }
 
 .btn-prev {
@@ -250,11 +89,9 @@
   justify-content: center;
 }
 
-carousel {
-  width: calc(100% - 50px);
-}
-
 .carousel-cell {
+  width: 100%;
+
   @media (max-width: 768px) {
     padding: 0;
     margin: 0;
@@ -263,7 +100,6 @@ carousel {
 
   display: flex;
   justify-content: center;
-  padding: 22px;
   font-family: Calibre;
   font-size: 15px;
   transition: all 0.5s;
@@ -271,8 +107,12 @@ carousel {
   line-height: 1.9em;
 
   >div {
-    max-width: 60%;
+    max-width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
 
 
@@ -292,21 +132,28 @@ carousel {
 }
 
 #carousel {
+
   width: 100%;
+
   carousel {
     width: 100%;
-    @media (max-width: 768px) {
-      min-height: 300px;
+    margin: 0;
+    @include breakpoint-less(sm) {
+      min-height: 250px;
     }
-
     ::ng-deep {
+      .carousel-cells {
+        width: 100% !important;
+      }
+
       .carousel-dots {
         bottom: -40px;
         display: flex;
         justify-content: center;
         max-width: 1140px;
+
         .carousel-dot-active {
-          background-color: black!important;
+          background-color: black !important;
         }
 
         ::ng-deep .carousel-dot {
