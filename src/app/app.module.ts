@@ -9,12 +9,11 @@ import { FullscreenMenuComponent } from './components/fullscreen-menu/fullscreen
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { PortfolioSectionComponent } from './components/portfolio-section/portfolio-section.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SwiperModule } from 'swiper/angular';
 import { ServicesComponent } from './components/services/services.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InitialsComponent } from './components/initials/initials.component';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    SlickCarouselModule,
-    IvyCarouselModule
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -48,6 +48,9 @@
 
 .btn-prev,
 .btn-next {
+  @include breakpoint-above(md) {
+    display:block;
+  }
   // position: absolute;
   margin-top: auto;
   margin-bottom: auto;
@@ -60,10 +63,16 @@
 
 .btn-prev {
   left: 0;
+  .arrow {
+    margin-left: 5px;
+  }
 }
 
 .btn-next {
   right: 0;
+  .arrow {
+    margin-right: 5px;
+  }
 }
 
 .arrow {
@@ -87,11 +96,12 @@
 .row {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .carousel-cell {
   width: 100%;
-
+  min-height: 250px;
   @media (max-width: 768px) {
     padding: 0;
     margin: 0;
@@ -132,16 +142,24 @@
 }
 
 #carousel {
-
+  display: flex;
   width: 100%;
-
-  carousel {
-    width: 100%;
-    margin: 0;
+  @include breakpoint-less(md) {
+    margin: 0 20px;
+  }
+swiper {
+    margin-right: 0;
     @include breakpoint-less(sm) {
-      min-height: 250px;
+      min-height: 280px;
     }
     ::ng-deep {
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: black!important;
+      }
+      .swiper-slide {
+        width: 100%!important;
+      }
       .carousel-cells {
         width: 100% !important;
       }

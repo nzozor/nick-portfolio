@@ -1,4 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
+import SwiperCore, {
+  Pagination,
+   Navigation
+} from 'swiper/core';
+import { DOCUMENT } from '@angular/common';
+
+SwiperCore.use([Pagination, Navigation]);
 
 @Component({
   selector: 'benoldi-reviews',
@@ -10,6 +17,7 @@ export class ReviewsComponent implements OnInit {
   @ViewChild('start') start: ElementRef;
   @ViewChild('slickModal') slickModal: any;
   @ViewChild('carousel') myCarousel: any;
+  // @ViewChild('swiper') swiper: any;
   slides = [
     {img: 'http://placehold.it/350x150/000000'},
     {img: 'http://placehold.it/350x150/111111'},
@@ -109,7 +117,8 @@ export class ReviewsComponent implements OnInit {
       }
     ]
   };
-  constructor() { }
+
+  constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
   }
@@ -142,10 +151,19 @@ export class ReviewsComponent implements OnInit {
   }
 
   next(): void {
-    this.myCarousel.next();
+    const el: any = this.document.querySelector('.swiper-container');
+    el?.swiper.slideNext();
   }
 
   prev(): void {
-    this.myCarousel.prev();
+    const el: any = this.document.querySelector('.swiper-container');
+    el?.swiper.slidePrev();
+  }
+
+  onSwiper(swiper: Event): void {
+  }
+
+  onSlideChange(): void {
+    console.log('slide change');
   }
 }
