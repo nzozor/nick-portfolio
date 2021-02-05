@@ -16,9 +16,10 @@
   width: 100%;
   height: 100%;
   color: $color-white-06;
-  @include transition(ease-out 0.2s);
 
   a {
+    font-family: degular;
+    font-weight: 100;
     &:not([class*=' button'], [class^='button']) {
       color: $color-white-08;
 
@@ -58,10 +59,11 @@
       position: relative;
       display: inline-block;
       opacity: 0.8;
-      background: $color-black;
       width: 60px;
       height: 60px;
       border-radius: 50%;
+      background: transparent;
+      border: 1px solid white;
       @include transition(ease-out 0.16s);
 
       &:before,
@@ -135,8 +137,13 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      @include breakpoint-less(md) {
+        display: flex;
+        flex-direction: column;
+      }
+
       li {
-        @include transform(translateY(8px));
+        // @include transform(translateY(8px));
         opacity: 0;
         margin: 8px 0;
         font-family: $font-family-secondary;
@@ -148,46 +155,11 @@
           text-decoration: none;
         }
 
-        @include transition(ease-out 0.14s);
-        @include transform(translateY(0));
+        // @include transition(ease-out 0.14s);
+        // @include transform(translateY(0));
         opacity: 1;
-        @include transition-delay(0.1s);
+        // @include transition-delay(0.1s);
 
-        &:nth-child(2) {
-          @include transition-delay(0.18s);
-        }
-
-        &:nth-child(3) {
-          @include transition-delay(0.26s);
-        }
-
-        &:nth-child(4) {
-          @include transition-delay(0.34s);
-        }
-
-        &:nth-child(5) {
-          @include transition-delay(0.42s);
-        }
-
-        &:nth-child(6) {
-          @include transition-delay(0.50s);
-        }
-
-        &:nth-child(7) {
-          @include transition-delay(0.58s);
-        }
-
-        &:nth-child(8) {
-          @include transition-delay(0.66s);
-        }
-
-        &:nth-child(9) {
-          @include transition-delay(0.74s);
-        }
-
-        &:nth-child(10) {
-          @include transition-delay(0.82s);
-        }
 
         a {
           display: inline-block;
@@ -235,7 +207,7 @@
       text-align: center;
       @include transform(translateY(0));
       opacity: 1;
-      @include transition-delay(0.1s);
+      // @include transition-delay(0.1s);
     }
   }
 }

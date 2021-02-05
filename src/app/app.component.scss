@@ -1,4 +1,8 @@
+
 .scrolltotop {
+  @media (min-width: 768px) {
+    display: none;
+  }
   > a {
     display: flex;
     justify-content: center;

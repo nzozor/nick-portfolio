@@ -57,6 +57,7 @@ body {
   position: relative;
   padding: 0 30px;
   margin: auto;
+  @include container-base-padding();
 }
 
 .container {

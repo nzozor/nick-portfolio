@@ -29,7 +29,7 @@ import { InitialsComponent } from './components/initials/initials.component';
     InitialsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FontAwesomeModule,
     SwiperModule

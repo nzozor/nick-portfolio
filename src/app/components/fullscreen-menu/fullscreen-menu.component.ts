@@ -22,4 +22,6 @@ export class FullscreenMenuComponent implements OnInit {
   toggleMenu() {
     this.menuBarToggle.emit();
   }
+
+
 }

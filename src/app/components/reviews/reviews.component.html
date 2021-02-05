@@ -13,6 +13,7 @@
       [pagination]="{ clickable: true }"
       (slideChange)="onSlideChange()"
       [height]="300"
+      [autoHeight]="true"
     >
       <ng-template swiperSlide  *ngFor="let review of reviews">
         <div class="carousel-cell">

@@ -46,41 +46,13 @@ export class ReviewsComponent implements OnInit {
 
   reviews = [
     {
-      quote: 'Really happy with my wax! Lovely venue, very clean and luxurious and my treatment was very professional. Would highly recommend.',
-      reviewerName: 'Kate'
+      quote: 'I worked with Elsa on creating branding visuals such as logos designs and websites UI designs in the past, she listens to my needs, very responsive to feedback, always produced quality works. I would definitely work with her again.',
+      reviewerName: 'Pauline Guo, Entrepreneur'
     },
     {
-      reviewerName: 'Liz',
-      quote: 'Such a professional and well run clinic. I have already made a follow up appointment. Cinzia was very knowledgeable about treatments and products without any hard sell. It was a lovely relaxing environment and I will be back. Thank you'
-    },
-    {
-      reviewerName: 'Ruth',
-      quote: 'There is nowhere I would trust more with my skin! I\'ve been coming here for about a year now and will continue. Cinza and her team are professional but also like my agony aunts!'
-    },
-    {
-      reviewerName: 'WeiTing',
-      quote: 'Cinzia was SO lovely. Walked into the salon, it smelled fab and the ambience was on point. My Hollywood laser treatment was as painless as it can be haha. Would definitely come back.'
-    },
-    {
-      reviewerName: 'Kate',
-      quote: 'Couldn\'t be bettered! Brilliant service, pleasant atmosphere, highly trained people who know their job!'
-    },
-    {
-      reviewerName: 'Lucy',
-      quote: 'Lovely manicure - clean salon and professional and very friendly staff',
-    },
-    {
-      reviewerName: 'Miriam',
-      quote: 'Best waxing I’ve had in London, I highly recommend Beauti!',
-    },
-    {
-      reviewerName: 'Bethany',
-      quote: 'Lovely staff and great atmosphere. Both treatments were perfect I’ll definitely be coming back',
-    },
-    {
-      reviewerName: 'Nadia',
-      quote: 'Brilliant and painless waxing - very chilled and Julia was perfect',
-    },
+      reviewerName: 'Owner of Beauti Skin Clinic',
+      quote: 'I can’t be happier with the job Elsa and her team did on my brand and website. She understood immediately my ideas and the needs of my business and created an elegant but user friendly website, which reflects completely the image of my clinic. The result of her work made my business to grow faster both in quantity and quality.'
+    }
   ];
 
 

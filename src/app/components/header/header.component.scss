@@ -23,16 +23,17 @@
 		}
 
     h4 {
-			margin: 0;
+      margin: 0;
+      line-height: 0;
     }
 
 		img {
 			width: auto;
-			height: 52px;
+			height: 50px;
       max-height: 52px;
-      max-width: 200px;
-      @media (min-width: 992px) {
-        max-width: 150px;
+      max-width: 150px;
+      @include breakpoint-above(md) {
+        max-width: 200px;
       }
     }
 

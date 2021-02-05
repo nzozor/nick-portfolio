@@ -2,7 +2,10 @@
 @import "../../../scss/helpers/mixins";
 
 .container {
-  margin: 140px auto;
+  margin: 20px auto;
+  @include breakpoint-above(md) {
+    margin: 140px auto;
+  }
 
   .row {
     justify-content: center;
@@ -14,7 +17,7 @@
     .service-item {
       border: 1px solid$elsa-gray;
       min-height: 300px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
 
       @include breakpoint-above(md) {
         max-width: 32%px;
@@ -43,7 +46,7 @@
       >div {
         font-family: Calibre-Light;
         text-align: center;
-        margin: 20px 10px;
+        margin: 20px 23px;
         font-size: 19px;
         line-height: 23px;
       }

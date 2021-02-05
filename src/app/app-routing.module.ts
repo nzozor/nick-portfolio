@@ -6,8 +6,9 @@ const routes: Routes = [];
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     useHash: true,
-    anchorScrolling: 'enabled'
-  })],
+    anchorScrolling: 'enabled',
+    initialNavigation: 'enabled'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

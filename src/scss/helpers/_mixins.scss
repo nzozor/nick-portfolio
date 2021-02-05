@@ -1,6 +1,13 @@
 //
 // Mixins //
 //
+@mixin container-base-padding {
+  padding: 0 30px;
+  @include breakpoint-less(md) {
+    padding: 0 25px;
+  }
+}
+
 @mixin display-flex {
   display: -webkit-box;
   display: -webkit-flex;

@@ -1,6 +1,7 @@
 @import "../../../scss/helpers/variables";
 :host {
   > div {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     min-height: 500px;
@@ -8,12 +9,12 @@
     color: white;
     flex-direction: column;
     text-align: center;
-    font-size: 43px;
     font-weight: 100;
     line-height: 38px;
     font-family: degular;
     font-weight: 200;
-    line-height: 1.1;
+    line-height: 1.2;
+  font-size: 2.7em;
   }
 }
 
@@ -23,9 +24,16 @@
   font-size: inherit;
   font-size: 18px;
   font-weight: 600;
-  // &::before { background-color: #ffffff80;}
   text-decoration: none;
   background: none;
-  border: 1px solid #ffffff80;
-  color: #ffffff80;
+  border: 1px solid white;
+  color:white;
+  font-size: degular;
+  height: 18px;
+
+  &:hover {
+    background: #eae2e280;
+    color: white;
+    border: 1px solid transparent;
+  }
 }
