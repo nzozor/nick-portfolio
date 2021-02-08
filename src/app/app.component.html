@@ -3,15 +3,11 @@
 
   <benoldi-header ></benoldi-header>
   <div>
-    <benoldi-hero-section></benoldi-hero-section>
-    <benoldi-portfolio-section></benoldi-portfolio-section>
-    <benoldi-reviews></benoldi-reviews>
-    <benoldi-services></benoldi-services>
-    <benoldi-call-to-action></benoldi-call-to-action>
-    <benoldi-footer></benoldi-footer>
-
+    <router-outlet></router-outlet>
     <div class="scrolltotop" (click)="onClickScroll('scroll-top-anchor')" [class.scrolltotop-show]="showScrollTopButton">
       <a class="button-circle button-circle-sm button-circle-dark" href="#"><fa-icon [icon]="faArrowUp"></fa-icon></a>
     </div>
   </div>
 </div>
+<benoldi-footer></benoldi-footer>
+
