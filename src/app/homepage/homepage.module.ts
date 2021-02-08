@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HompageRoutingModule } from './hompage-routing.module';
-import { HompageComponent } from './hompage.component';
+import { homepageRoutingModule } from './homepage-routing.module';
+import { homepageComponent } from './homepage.component';
 import { HeroSectionComponent } from '../components/hero-section/hero-section.component';
 import { PortfolioSectionComponent } from '../components/portfolio-section/portfolio-section.component';
 import { ServicesComponent } from '../components/services/services.component';
@@ -12,7 +12,7 @@ import { CallToActionComponent } from '../components/call-to-action/call-to-acti
 import { InitialsComponent } from '../components/initials/initials.component';
 
 @NgModule({
-  declarations: [HompageComponent,
+  declarations: [homepageComponent,
     HeroSectionComponent,
     PortfolioSectionComponent,
     ServicesComponent,
@@ -22,8 +22,8 @@ import { InitialsComponent } from '../components/initials/initials.component';
   ],
   imports: [
     CommonModule,
-    HompageRoutingModule,
+    homepageRoutingModule,
     SwiperModule
   ]
 })
-export class HompageModule { }
+export class HomepageModule { }
