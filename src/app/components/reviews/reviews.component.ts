@@ -17,32 +17,6 @@ export class ReviewsComponent implements OnInit {
   @ViewChild('start') start: ElementRef;
   @ViewChild('slickModal') slickModal: any;
   @ViewChild('carousel') myCarousel: any;
-  // @ViewChild('swiper') swiper: any;
-  slides = [
-    {img: 'http://placehold.it/350x150/000000'},
-    {img: 'http://placehold.it/350x150/111111'},
-    {img: 'http://placehold.it/350x150/333333'},
-    {img: 'http://placehold.it/350x150/666666'}
-  ];
-  // slideConfig = {"slidesToShow": 1, "slidesToScroll": 1};
-  activeSlide = 0;
-  slideCount = 0;
-  visiblePanels = 1;
-  sensitivity = 25;
-  visibleContainerStyle = {};
-  sliderMainContainerStyle = {};
-  sliderWidth = 0;
-  activeSliderWidth = 0;
-
-  // sliderPanelstyle = {
-  //   width: '250px'
-  // };
-
-  minHeight = 373;
-  marginBetweenSlides = 10;
-  totalSlideWidth = 0;
-  stars = [1, 2, 3, 4, 5];
-  innerWidth = 0;
 
   reviews = [
     {
@@ -52,74 +26,15 @@ export class ReviewsComponent implements OnInit {
     {
       reviewerName: 'Owner of Beauti Skin Clinic',
       quote: 'I can’t be happier with the job Elsa and her team did on my brand and website. She understood immediately my ideas and the needs of my business and created an elegant but user friendly website, which reflects completely the image of my clinic. The result of her work made my business to grow faster both in quantity and quality.'
+    },
+    {
+      quote : 'It is an absolute joy to work with Elsa. She has a keen eye for design and is most efficient, even when working under extreme pressure. She is most reliable and promptly addresses any issues that may arise in a creative and constructive manner. I cannot recommend her highly enough!',
+      reviewerName: 'Flavia Frigeri, Curator'
     }
   ];
 
-
-  slideConfig = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: '<div class=\'nav-btn next-slide\'></div>',
-    prevArrow: '<div class=\'nav-btn prev-slide\'></div>',
-    dots: true,
-    infinite: true,
-    centerMode: true,
-    variableWidth: true,
-    adaptiveHeight: true,
-    focusOnSelect: false,
-    touchThreshold: 1000,
-    // touchMove: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          variableWidth: true,
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          slidesToShow: 1
-        }
-      }
-    ]
-  };
-
   constructor(@Inject(DOCUMENT) private document: Document) { }
-
   ngOnInit(): void {
-  }
-
-
-  slickInit(e: any): void {
-    console.log('slick initialized');
-  }
-
-  breakpoint(e: any): void {
-    console.log('breakpoint');
-  }
-
-  afterChange(e: any): void {
-    console.log('afterChange');
-  }
-
-  beforeChange(e: any): void {
-    console.log('beforeChange');
-  }
-
-  swipe(): void {
-    setTimeout(() => {
-      this.slickModal.slickGoTo(this.slickModal.currentIndex);
-    }, 0);
-  }
-
-  slickGoTo(e: any): void {
-    this.slickModal.slickGoTo(4);
   }
 
   next(): void {
@@ -130,12 +45,5 @@ export class ReviewsComponent implements OnInit {
   prev(): void {
     const el: any = this.document.querySelector('.swiper-container');
     el?.swiper.slidePrev();
-  }
-
-  onSwiper(swiper: Event): void {
-  }
-
-  onSlideChange(): void {
-    console.log('slide change');
   }
 }

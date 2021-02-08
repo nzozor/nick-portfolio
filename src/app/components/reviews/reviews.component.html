@@ -9,12 +9,11 @@
       <swiper class="swiper-container" #swiper
       [slidesPerView]="1"
       [spaceBetween]="0"
-      (swiper)="onSwiper($event)"
       [pagination]="{ clickable: true }"
-      (slideChange)="onSlideChange()"
       [height]="300"
       [autoHeight]="true"
       [loop]="true"
+
     >
       <ng-template swiperSlide  *ngFor="let review of reviews">
         <div class="carousel-cell">

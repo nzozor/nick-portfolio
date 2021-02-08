@@ -5,11 +5,11 @@
     <linearGradient id="grad1" x1="0%" y1="0%" x2="50%" y2="100%">
 
       <stop offset="0%" stop-color="#f3f3f3">
-        <animate attributeName="stop-color" values="#f3f3f3; #ececec; #dedede; #f3f3f3" dur="12s" repeatCount="indefinite"></animate>
+        <animate attributeName="stop-color" values="#f3f3f3; #FCFCFC; #ebebeb; #f3f3f3" dur="12s" repeatCount="indefinite"></animate>
       </stop>
 
-      <stop offset="100%" stop-color="#ececec">
-        <animate attributeName="stop-color" values="#ececec; #dedede;#f3f3f3; #dedede;#ececec" dur="12s" repeatCount="indefinite"></animate>
+      <stop offset="100%" stop-color="#FCFCFC">
+        <animate attributeName="stop-color" values="#FCFCFC; #ebebeb;#f3f3f3; #ebebeb;#FCFCFC" dur="12s" repeatCount="indefinite"></animate>
       </stop>
 
 

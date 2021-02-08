@@ -64,6 +64,7 @@
 						@include transform(translateY(10px));
 						opacity: 0;
 						@include transition(ease-out 0.14s);
+            font-weight: 100;
 						&:nth-child(1) { @include transition-delay(0.06s); }
 						&:nth-child(2) { @include transition-delay(0.12s); }
 						&:nth-child(3) { @include transition-delay(0.18s); }
