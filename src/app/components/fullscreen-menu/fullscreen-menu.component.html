@@ -3,9 +3,9 @@
   <div class="container text-center">
     <div class="middle">
       <ul class="full-menu list-inline">
-        <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+        <li><a [routerLink]="['']" (click)="toggleMenu()">Home</a></li>
         <li><a routerLink="/" (click)="toggleMenu()">Work</a></li>
-        <li><a routerLink="/" (click)="toggleMenu()">About</a></li>
+        <li><a [routerLink]="['/about']" (click)="toggleMenu()">About</a></li>
         <li><a routerLink="/" (click)="toggleMenu()">Process</a></li>
         <li><a routerLink="/" (click)="toggleMenu()">Contact</a></li>
 

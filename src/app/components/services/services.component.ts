@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ServiceItem } from 'src/app/shared/models/service-item';
 
 @Component({
   selector: 'benoldi-services',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
+  @Input() items: ServiceItem[];
   constructor() { }
-
   ngOnInit(): void {
+
   }
 
 }

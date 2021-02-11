@@ -1,0 +1,71 @@
+@import "../../scss/helpers/mixins";
+
+h2 {
+  font-family: degular;
+  font-size: 3em;
+  font-weight: 500;
+  margin-bottom: 30px;
+  @include breakpoint-less(md) {
+    margin-top: 0;
+  }
+}
+
+h1 {
+  font-family: degular;
+  line-height: 1.2;
+  font-weight: 100;
+  font-family: Calibre-Light;
+  font-size: 19px;
+  text-align: left;
+  margin: 0;
+  @include breakpoint-above(md) {
+    font-size: 25px;
+  }
+}
+
+benoldi-hero-section {
+  ::ng-deep {
+    > div {
+      padding-top: 100px!important;
+      margin-bottom: 0!important;
+    }
+  }
+}
+
+// .elsa {
+//   min-height: 700px;
+//   background-position-y: -330px;
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+
+
+.img-wrapper {
+  margin: 30px;
+  margin-top:37px;
+  img {
+    width: 100%;
+  }
+}
+benoldi-parallax {
+  ::ng-deep > div {
+    font-family: degular;
+    font-weight: 100;
+    font-size: 2.3em;
+    color: white;
+    @include breakpoint-less(sm) {
+      font-size: 1.5em;
+        > div {
+          margin: 20px;
+        }
+
+
+    }
+  }
+}
+benoldi-call-to-action#call-to-action {
+  ::ng-deep {
+    > div {
+      margin-top: 0;
+    }
+  }
+}

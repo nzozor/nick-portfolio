@@ -1,0 +1,23 @@
+
+@import "../../../scss/helpers/mixins";
+
+
+.parallax {
+  min-height: 100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  @include breakpoint-less(sm) {
+    background-position-y: 0!important;
+    background-position-x: 0!important;
+    background-attachment: initial;
+  }
+
+}

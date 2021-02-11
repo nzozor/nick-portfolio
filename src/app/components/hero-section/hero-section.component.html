@@ -1,11 +1,8 @@
   <!-- Hero section -->
   <div class="hero-section">
     <div class="container">
-      <h1 >
-        I Help curious growing businesses to build their identity. <br class="divider" />
-        I give shape to their uniqueness by focusing on simplicity.
-      </h1>
+        <ng-content></ng-content>
     </div><!-- end container -->
-    <benoldi-initials></benoldi-initials>
+    <benoldi-initials *ngIf="initials"></benoldi-initials>
   </div>
   <!-- end Hero section -->
