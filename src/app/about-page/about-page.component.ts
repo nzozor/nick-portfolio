@@ -22,7 +22,7 @@ export class AboutPageComponent implements OnInit {
     },
     {
       assetRef: '../../../assets/images/save-money.svg',
-      title: 'Save money',
+      title: 'Save money & time',
       description: 'As a solo entrepreneur, I reduce the costs of a full-service agency. I value working quickly, professionally with effective results.'
     },
     {
