@@ -17,6 +17,18 @@
 }
 
 benoldi-parallax#parallax {
+  @include breakpoint-less(sm) {
+    .overlay {
+      background-color: white;
+      height: 422%;
+      position: absolute;
+      top: -500px;
+      width: 422%;
+      z-index: -1;
+      opacity: 0.3;
+      left: -1000px;
+    }
+  }
   ::ng-deep {
     >div {
       height: 70vh;
@@ -84,9 +96,9 @@ benoldi-parallax#parallax {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      font-family: Calibre;
+      font-family: Calibre-Light;
       font-weight: 100;
-      line-height: 31px;
+      line-height: 1.4em;
       font-size: 1.2em;
       @include breakpoint-less(sm) {
         margin-bottom: 30px;

@@ -1,0 +1,78 @@
+@import "../../scss/helpers/mixins";
+
+.container {
+  margin-top: 120px;
+  @include breakpoint-less(sm) {
+    margin-top: 50px;
+  }
+}
+h1 {
+  font-weight: 100;
+  margin-left: 15px;
+  @include breakpoint-less(sm) {
+    line-height: 1em;
+    margin-left: 0;
+  }
+}
+
+h2 {
+  font-family: degular;
+  font-weight: 500;
+  font-size:1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: Calibre-Light;
+  font-size: 1.3em;
+  line-height:23px;
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+.where-to-meet, .selfie {
+  display: flex;
+  > div {
+    flex-basis: 50%;
+    margin: 15px;
+  }
+}
+
+.where-to-meet {
+  margin: 80px auto;
+  @include breakpoint-less(sm) {
+    flex-direction: column;
+  }
+
+  > div {
+    @include breakpoint-less(sm) {
+      margin-left: 0;
+    }
+    &:first-of-type {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.selfie {
+  margin: 15px;
+  @include breakpoint-less(sm) {
+    flex-direction: column;
+    margin: 10px;
+  }
+  > div {
+  margin: 15px;
+  @include breakpoint-less(sm) {
+    margin: 10px;
+  }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+benoldi-call-to-action.call-action {
+  ::ng-deep > div {
+    margin-top: 0;
+  }
+}

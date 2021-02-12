@@ -4,10 +4,10 @@
     <div class="middle">
       <ul class="full-menu list-inline">
         <li><a [routerLink]="['']" (click)="toggleMenu()">Home</a></li>
-        <li><a routerLink="/" (click)="toggleMenu()">Work</a></li>
+        <li><a [routerLink]="['/work']"(click)="toggleMenu()">Work</a></li>
         <li><a [routerLink]="['/about']" (click)="toggleMenu()">About</a></li>
         <li><a [routerLink]="['/process']" (click)="toggleMenu()">Process</a></li>
-        <li><a routerLink="/" (click)="toggleMenu()">Contact</a></li>
+        <li><a [routerLink]="['/contact']" (click)="toggleMenu()">Contact</a></li>
 
       </ul>
     </div>
