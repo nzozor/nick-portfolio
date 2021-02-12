@@ -11,11 +11,11 @@ import { CallToActionComponent } from '../components/call-to-action/call-to-acti
 import { JumbotronModule } from '../shared/modules/jumbotron/jumbotron.module';
 import { CallToActionModule } from '../shared/modules/call-to-action/call-to-action.module';
 import { ServicesModule } from '../shared/modules/services/services.module';
+import { PortfolioSectionModule } from '../shared/modules/portfolio-section/portfolio-section.module';
 
 @NgModule({
   declarations: [
     homepageComponent,
-    PortfolioSectionComponent,
     ReviewsComponent,
   ],
   imports: [
@@ -24,7 +24,8 @@ import { ServicesModule } from '../shared/modules/services/services.module';
     SwiperModule,
     JumbotronModule,
     CallToActionModule,
-    ServicesModule
+    ServicesModule,
+    PortfolioSectionModule
   ]
 })
 export class HomepageModule { }

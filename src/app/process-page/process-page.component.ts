@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./process-page.component.scss']
 })
 export class ProcessPageComponent implements OnInit {
-  imgProcessUrl = '../../../assets/images/elsa-benoldi-graphic-design-research.jpg';
+  imgProcessUrl = '../../assets/images/process/elsa-benoldi-graphic-design-magazine.jpg';
 
   constructor() { }
 
