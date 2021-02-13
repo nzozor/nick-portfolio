@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Thumbnail } from 'src/app/shared/models/project';
 
 @Component({
   selector: 'benoldi-portfolio-section',
@@ -6,16 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./portfolio-section.component.scss']
 })
 export class PortfolioSectionComponent implements OnInit {
-  @Input() numberOfProjects: number;
+  @Input() thumbnails: Thumbnail[];
+
   constructor() { }
-  projects: null[];
 
   ngOnInit(): void {
-    if(this.numberOfProjects) {
-      this.projects = new Array(this.numberOfProjects);
-    } else {
-      this.projects = new Array(9);
-    }
+
   }
 
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Thumbnail } from '../shared/models/project';
 import { ServiceItem } from '../shared/models/service-item';
+import { DataService } from '../shared/services/data.service';
 
 @Component({
   selector: 'benoldi-homepage',
@@ -24,9 +27,11 @@ export class homepageComponent implements OnInit {
       description: 'With experience in UX/UX, I design and develop functional and visually impressive websites and mobile apps.'
     }
   ];
-  constructor() { }
+  $thumbnails: Observable<Thumbnail>;
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.$thumbnails = this.dataService.fetchThumbnailsHomePage();
   }
 
 }

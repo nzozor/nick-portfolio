@@ -4,14 +4,14 @@
     class="row  portfolio-grid portfolio-title-overlay"
   >
     <!-- Portfolio Item -->
-    <div class="portfolio-item" *ngFor="let project of projects">
+    <div class="portfolio-item" *ngFor="let thumbnail of thumbnails">
       <a href="#">
         <div class="portfolio-img">
-          <img src="../assets/images/col-1.jpg" alt="" />
+          <img src="{{thumbnail.thumbnailUrl}}" alt="{{thumbnail.imgAlt}}" />
         </div>
         <div class="portfolio-hover">
           <div class="portfolio-hover-box">
-            <h3 class="font-weight-normal">Project Title</h3>
+            <h3 class="font-weight-normal">{{thumbnail.projectName}}</h3>
             <!-- <span
               class="font-small font-family-secondary font-weight-medium uppercase"
               >Category</span> -->

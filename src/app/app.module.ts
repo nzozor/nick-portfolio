@@ -7,6 +7,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FullscreenMenuComponent } from './components/fullscreen-menu/fullscreen-menu.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from 'src/mock/in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,10 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FontAwesomeModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
