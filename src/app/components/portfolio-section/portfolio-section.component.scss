@@ -19,6 +19,7 @@
 
   .portfolio-title-overlay{
     .portfolio-item {
+      cursor: pointer;
       padding: 25px;
       padding-top: 0;
       @include breakpoint-above(md) {

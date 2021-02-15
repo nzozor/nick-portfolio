@@ -1,1 +1,39 @@
-<p>project-page works!</p>
+<div *ngIf="project$ | async as project">
+  <benoldi-hero-section class="model-2" [initials]="false">
+    <h1>{{project.projectName}}</h1>
+    <h2 class="hero">{{project.projectDescription}}</h2>
+  </benoldi-hero-section>
+  <div class="container">
+    <img src="{{project.mainImgUrl}}" alt="{{project.imgAlt}}">
+    <div class="project-insights">
+      <div>
+        <h3>Client</h3>
+        <p>
+          {{project.clientName}}
+        </p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <p>
+          {{project.clientName}}
+        </p>
+      </div>
+      <div *ngIf="project.clientUrl; else countryBlock">
+        <h3>Project link</h3>
+        <p>
+          <a href="{{project.clientUrl}}" target="_blank">go to project</a>
+        </p>
+      </div>
+      <ng-template #countryBlock >
+        <h3>Country</h3>
+        {{project.country}}
+      </ng-template>
+    </div>
+    <div class="gallery">
+      <div class="item" *ngFor="let item of project.galleryImgs" [ngClass]="imageTypeClass(item)">
+        <img src="{{item.largeImgUrl}}" alt="{{item.imgAlt}}">
+      </div>
+    </div>
+  </div>
+
+</div>

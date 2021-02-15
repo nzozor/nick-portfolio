@@ -1,0 +1,9 @@
+benoldi-hero-section.model-2 {
+    > div {
+      padding-top: 100px!important;
+      margin-bottom: 0!important;
+      @include breakpoint-less(sm) {
+        padding-top: 50px!important;
+      }
+    }
+}

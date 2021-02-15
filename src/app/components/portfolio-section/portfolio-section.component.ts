@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Thumbnail } from 'src/app/shared/models/project';
+import { Router } from '@angular/router';
+import { Project, Thumbnail } from 'src/app/shared/models/project';
 
 @Component({
   selector: 'benoldi-portfolio-section',
@@ -9,10 +10,14 @@ import { Thumbnail } from 'src/app/shared/models/project';
 export class PortfolioSectionComponent implements OnInit {
   @Input() thumbnails: Thumbnail[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
   }
+  goToProjectPage(projectId: string): void {
 
+    const id = projectId || null;
+    this.router.navigate([`project/${projectId}`]);
+  }
 }

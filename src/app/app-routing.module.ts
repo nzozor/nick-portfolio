@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: 'process', loadChildren: () => import('./process-page/process-page.module').then(m => m.ProcessPageModule) },
   { path: 'contact', loadChildren: () => import('./contact-page/contact-page.module').then(m => m.ContactPageModule) },
   { path: 'work', loadChildren: () => import('./work-page/work-page.module').then(m => m.WorkPageModule) },
-  { path: 'project', loadChildren: () => import('./project-page/project-page.module').then(m => m.ProjectPageModule) },
+  { path: 'project/:id', loadChildren: () => import('./project-page/project-page.module').then(m => m.ProjectPageModule) },
 ];
 
 @NgModule({

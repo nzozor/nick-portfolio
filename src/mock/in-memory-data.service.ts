@@ -4,6 +4,7 @@ import { RequestInfo, ResponseOptions } from 'angular-in-memory-web-api/interfac
 import { Observable, of } from 'rxjs';
 import { Project } from 'src/app/shared/models/project';
 import { BENOLDI_PROJECTS } from './projects';
+import { v4 as uuidv4 } from 'uuid';
 
 interface Response {
   status: number;
@@ -16,8 +17,13 @@ interface Response {
   providedIn: 'root'
 })
 export class InMemoryDataService implements InMemoryDataService {
+  projects: Project[];
   createDb(): {} { return {}; }
-  constructor() { }
+  constructor() {
+    this.projects = BENOLDI_PROJECTS;
+    this.projects = [...this.projects, ...this.projects, ...this.projects];
+    this.projects = [...this.projects, ...this.projects];
+   }
 
   post(reqInfo: RequestInfo): void{
     if (reqInfo.collectionName === 'api/project-list/homepage') {
@@ -29,19 +35,36 @@ export class InMemoryDataService implements InMemoryDataService {
     }
   }
 
-  get(reqInfo: RequestInfo): Observable<any> {
+  get(reqInfo: RequestInfo): Observable<ResponseOptions> {
     if (reqInfo.url === '/thumbnails/homepage') {
       return this.getHomePageThumbnails(reqInfo);
+    }
+    if (reqInfo.url.includes('/projectDetails')) {
+      return this.getProjectDetails(reqInfo);
     }
     return of({});
   }
 
+  private getProjectDetails(reqInfo: RequestInfo): Observable<ResponseOptions> {
+    const params = reqInfo.url.split('/');
+    const lastUrlParams = params[params.length - 1];
+    const projectDetails = this.projects.filter(project => project.projectId === lastUrlParams)[0];
+    return reqInfo.utils.createResponse$((): ResponseOptions => {
+      const options: ResponseOptions = {
+        body: projectDetails,
+        status: 200
+      };
+      return this.finishOptions(options, reqInfo);
+    });
+  }
+
   private getHomePageThumbnails(reqInfo: RequestInfo): Observable<ResponseOptions> {
-    const projects = BENOLDI_PROJECTS.slice(0, 9);
+    const projects = this.projects.slice(0, 9);
     const thumbnails = projects.map((project: Project) => ({
       projectName: project.projectName,
       thumbnailUrl: project.thumbnailUrl,
-      imgAlt: project.imgAlt
+      imgAlt: project.imgAlt,
+      projectId: project.projectId
     }));
     return reqInfo.utils.createResponse$((): ResponseOptions => {
       const options: ResponseOptions = {

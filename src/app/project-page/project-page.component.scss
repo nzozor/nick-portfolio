@@ -1,0 +1,67 @@
+@import "../../scss/helpers/mixins";
+
+.project-insights {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  @include breakpoint-less(sm) {
+    flex-direction: column;
+
+  }
+  h3 {
+    font-family: degular;
+    font-weight: 100;
+    font-size: 1.7em;
+    margin-bottom: 0;
+  }
+  p {
+    font-family: Calibre-Light;
+    font-size: 1.3em;
+
+    a {
+      font-family: Calibre-Light;
+      font-size: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  >div {
+    padding: 15px;
+
+    &.full {
+      width: 100%;
+    }
+
+    &.half,
+    &.vertical {
+      width: 50%;
+    }
+  }
+}
+
+benoldi-hero-section {
+
+  ::ng-deep {
+    .hero-section {
+      padding-bottom: 60px;
+    }
+  }
+}
+
+h2.hero {
+  @include breakpoint-less(sm) {
+    font-size: 1.5em;
+  }
+}

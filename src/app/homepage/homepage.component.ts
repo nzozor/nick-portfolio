@@ -27,11 +27,10 @@ export class homepageComponent implements OnInit {
       description: 'With experience in UX/UX, I design and develop functional and visually impressive websites and mobile apps.'
     }
   ];
-  $thumbnails: Observable<Thumbnail>;
+  $thumbnails: Observable<Thumbnail[]>;
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     this.$thumbnails = this.dataService.fetchThumbnailsHomePage();
   }
-
 }

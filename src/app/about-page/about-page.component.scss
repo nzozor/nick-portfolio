@@ -1,19 +1,5 @@
 @import "../../scss/helpers/mixins";
 
-h1 {
-
-}
-benoldi-hero-section {
-  ::ng-deep {
-    > div {
-      padding-top: 100px!important;
-      margin-bottom: 0!important;
-      @include breakpoint-less(sm) {
-        padding-top: 50px!important;
-      }
-    }
-  }
-}
 
 h3 {
   text-align: center;
