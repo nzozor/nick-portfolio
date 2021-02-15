@@ -15,7 +15,16 @@
     }
   }
 }
-
+.process {
+  @include breakpoint-above(md) {
+    h2 {
+      width: 100vw;
+      br {
+        display: block;
+      }
+    }
+  }
+}
 benoldi-parallax#parallax {
   @include breakpoint-less(sm) {
     .overlay {
@@ -31,7 +40,6 @@ benoldi-parallax#parallax {
   }
   ::ng-deep {
     >div {
-      height: 70vh;
       position: relative;
       width: 100%;
       top: 0;
@@ -50,7 +58,6 @@ benoldi-parallax#parallax {
   }
 }
 .container.steps {
-
   .row {
 
     display: flex;
@@ -106,10 +113,9 @@ benoldi-parallax#parallax {
       h3 {
         margin-top: 0;
         font-family: degular;
-        font-size: 2em;
+        font-size: 1.6em;
         font-weight: 500;
       }
-
     }
   }
 }

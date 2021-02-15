@@ -3,12 +3,11 @@
 
 
 .hero-section {
-  padding: 240px 0;
   position: relative;
   padding: 25% 0;
   padding-bottom: 1%;
   margin-bottom: 80px;
   @include breakpoint-above(md) {
-    padding: 240px 0;
+    padding: 185px 0;
   }
 }

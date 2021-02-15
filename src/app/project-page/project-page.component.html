@@ -1,7 +1,7 @@
 <div *ngIf="project$ | async as project">
   <benoldi-hero-section class="model-2" [initials]="false">
     <h1>{{project.projectName}}</h1>
-    <h2 class="hero">{{project.projectDescription}}</h2>
+    <h2>{{project.projectDescription}}</h2>
   </benoldi-hero-section>
   <div class="container">
     <img src="{{project.mainImgUrl}}" alt="{{project.imgAlt}}">
@@ -34,6 +34,15 @@
         <img src="{{item.largeImgUrl}}" alt="{{item.imgAlt}}">
       </div>
     </div>
+    <div class="navigation">
+      <button class="btn-prev" (click)="prev()">
+        <i class="arrow left"></i>
+        <span>Previous project</span>
+      </button>
+      <button class="btn-next" (click)="next()">
+        <span>Next project</span>
+        <i class="arrow right"></i>
+      </button>
+    </div>
   </div>
-
 </div>

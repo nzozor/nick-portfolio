@@ -21,7 +21,9 @@ export class InMemoryDataService implements InMemoryDataService {
   createDb(): {} { return {}; }
   constructor() {
     this.projects = BENOLDI_PROJECTS;
-    this.projects = [...this.projects, ...this.projects, ...this.projects];
+    this.projects = [...this.projects, ...this.projects];
+    this.projects = [...this.projects, ...this.projects];
+    this.projects = [...this.projects, ...this.projects];
     this.projects = [...this.projects, ...this.projects];
    }
 
@@ -39,10 +41,60 @@ export class InMemoryDataService implements InMemoryDataService {
     if (reqInfo.url === '/thumbnails/homepage') {
       return this.getHomePageThumbnails(reqInfo);
     }
+    if (reqInfo.url === '/thumbnails/workpage') {
+      return this.getWorkThumbnails(reqInfo);
+    }
+    if (reqInfo.url.includes('/projectDetails/next')) {
+      return this.getNextProjectDetails(reqInfo);
+    }
+
+    if (reqInfo.url.includes('/projectDetails/prev')) {
+      return this.getPrevProjectDetails(reqInfo);
+    }
     if (reqInfo.url.includes('/projectDetails')) {
       return this.getProjectDetails(reqInfo);
     }
     return of({});
+  }
+
+  private getPrevProjectDetails(reqInfo: RequestInfo): Observable<ResponseOptions> {
+    const params = reqInfo.url.split('/');
+    const lastUrlParams = params[params.length - 1];
+    const projectDetails = this.projects.filter(project => project.projectId === lastUrlParams)[0];
+    const projectIndex = this.projects.findIndex(project => project.projectId === projectDetails.projectId);
+    let prevProject: Project;
+    if (projectIndex - 1 < 0) {
+      prevProject = this.projects[this.projects.length - 1];
+    } else {
+      prevProject = this.projects[projectIndex - 1];
+    }
+    return reqInfo.utils.createResponse$((): ResponseOptions => {
+      const options: ResponseOptions = {
+        body: prevProject,
+        status: 200
+      };
+      return this.finishOptions(options, reqInfo);
+    });
+  }
+
+  private getNextProjectDetails(reqInfo: RequestInfo): Observable<ResponseOptions> {
+    const params = reqInfo.url.split('/');
+    const lastUrlParams = params[params.length - 1];
+    const projectDetails = this.projects.filter(project => project.projectId === lastUrlParams)[0];
+    const projectIndex = this.projects.findIndex(project => project.projectId === projectDetails.projectId);
+    let nextProject: Project;
+    if (projectIndex + 1 > this.projects.length - 1) {
+      nextProject = this.projects[0];
+    } else {
+      nextProject = this.projects[projectIndex + 1];
+    }
+    return reqInfo.utils.createResponse$((): ResponseOptions => {
+      const options: ResponseOptions = {
+        body: nextProject,
+        status: 200
+      };
+      return this.finishOptions(options, reqInfo);
+    });
   }
 
   private getProjectDetails(reqInfo: RequestInfo): Observable<ResponseOptions> {
@@ -52,6 +104,21 @@ export class InMemoryDataService implements InMemoryDataService {
     return reqInfo.utils.createResponse$((): ResponseOptions => {
       const options: ResponseOptions = {
         body: projectDetails,
+        status: 200
+      };
+      return this.finishOptions(options, reqInfo);
+    });
+  }
+  private getWorkThumbnails(reqInfo: RequestInfo): Observable<ResponseOptions> {
+    const thumbnails = this.projects.map((project: Project) => ({
+      projectName: project.projectName,
+      thumbnailUrl: project.thumbnailUrl,
+      imgAlt: project.imgAlt,
+      projectId: project.projectId
+    }));
+    return reqInfo.utils.createResponse$((): ResponseOptions => {
+      const options: ResponseOptions = {
+        body: thumbnails,
         status: 200
       };
       return this.finishOptions(options, reqInfo);
@@ -73,8 +140,6 @@ export class InMemoryDataService implements InMemoryDataService {
       };
       return this.finishOptions(options, reqInfo);
     });
-
-
   }
   /////////// helpers ///////////////
   private finishOptions(options: ResponseOptions, { headers, url }: RequestInfo): ResponseOptions {

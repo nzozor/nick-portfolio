@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project, Thumbnail } from 'src/app/shared/models/project';
+import { Thumbnail } from 'src/app/shared/models/project';
 
 @Component({
   selector: 'benoldi-portfolio-section',

@@ -20,7 +20,7 @@
       margin-bottom: 25px;
 
       @include breakpoint-above(md) {
-        max-width: 32%;
+        width: 32%;
         margin-right: 30px;
         &:last-of-type {
           margin-right: 0;
@@ -46,8 +46,8 @@
         font-family: Calibre-Light;
         text-align: center;
         margin: 20px 23px;
-        font-size: 19px;
-        line-height: 23px;
+        font-size: 1.2em;
+        line-height: 1.4em;
       }
     }
   }

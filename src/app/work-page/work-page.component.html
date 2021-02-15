@@ -1,4 +1,6 @@
 <div class="container">
   <h1>Work</h1>
-  <benoldi-portfolio-section id="work"></benoldi-portfolio-section>
+  <ng-container *ngIf="$thumbnails | async as thumbnails">
+    <benoldi-portfolio-section id="work" [thumbnails]="thumbnails"></benoldi-portfolio-section>
+  </ng-container>
 </div>

@@ -1,10 +1,11 @@
 @import "../../scss/helpers/mixins";
+@import "../../scss/helpers/variables";
 
 .project-insights {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  margin-bottom: 70px;
+  margin-top: 40px;
   @include breakpoint-less(sm) {
     flex-direction: column;
 
@@ -15,9 +16,11 @@
     font-size: 1.7em;
     margin-bottom: 0;
   }
+
   p {
     font-family: Calibre-Light;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    line-height: 1.4em;
 
     a {
       font-family: Calibre-Light;
@@ -63,5 +66,38 @@ benoldi-hero-section {
 h2.hero {
   @include breakpoint-less(sm) {
     font-size: 1.5em;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  span {
+    opacity: 0;
+    color: $elsa-gray;
+    font-family: Calibre-Light;
+    font-weight: 100;
+    font-size: 1.3em;
+    transition: opacity .25s ease-in-out;
+    @include breakpoint-less(lg) {
+      opacity: 1;
+    }
+  }
+
+  .btn-prev, .btn-next {
+    @include breakpoint-less(sm) {
+      margin: 0;
+    }
+
+    &:hover {
+      span {
+        opacity: 1;
+      }
+    }
+    width: initial;
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
   }
 }
