@@ -12,9 +12,15 @@
     justify-content: center;
     text-align: center;
   }
+  li {
+    margin: 5px;
+    &:after {
+      content: none;
+    }
+    a {
+      text-decoration: none;
 
-  a {
-    text-decoration: none;
+    }
   }
 }
 

@@ -4,10 +4,11 @@
 
 .hero-section {
   position: relative;
-  padding: 25% 0;
-  padding-bottom: 1%;
-  margin-bottom: 80px;
-  @include breakpoint-above(md) {
+  padding: 15% 0;
+
+  @include breakpoint-above(lg) {
     padding: 185px 0;
+  margin-bottom: 80px;
+
   }
 }

@@ -1,14 +1,24 @@
-
 .scrolltotop {
   @media (min-width: 768px) {
     display: none;
   }
-  > a {
+
+  >a {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
+
 fa-icon {
   display: flex;
+}
+
+i {
+  transform: rotate(225deg) scale(.8);
+  margin-top: 6px;
+}
+
+.btn-prev .arrow {
+  margin-left: 0;
 }

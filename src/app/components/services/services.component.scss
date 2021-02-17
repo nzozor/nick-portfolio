@@ -3,6 +3,7 @@
 
 .container {
   margin: 20px auto;
+
   @include breakpoint-above(md) {
     margin: 140px auto;
   }
@@ -18,36 +19,43 @@
       border: 1px solid$elsa-gray;
       min-height: 300px;
       margin-bottom: 25px;
-
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
       @include breakpoint-above(md) {
         width: 32%;
         margin-right: 30px;
+
         &:last-of-type {
           margin-right: 0;
         }
       }
 
-      img {
-        max-width: 75px;
-        margin: 35px auto 20px auto;
-        display: flex;
-        min-height: 80px;
-      }
-
-      h4 {
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-        font-family: degular;
-        font-weight: 500;
-      }
-
       >div {
-        font-family: Calibre-Light;
-        text-align: center;
-        margin: 20px 23px;
-        font-size: 1.2em;
-        line-height: 1.4em;
+
+        img {
+          max-width: 75px;
+          margin: 0 auto;
+          display: flex;
+          min-height: 80px;
+        }
+
+        h4 {
+          font-size: 20px;
+          text-align: center;
+          margin: 20px;
+          font-family: degular;
+          font-weight: 500;
+        }
+
+        >div {
+          font-family: Calibre-Light;
+          text-align: center;
+          margin: 20px 23px 0;
+          font-size: 1.2em;
+          line-height: 1.4em;
+        }
       }
     }
   }

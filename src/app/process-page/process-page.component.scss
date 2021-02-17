@@ -16,6 +16,9 @@
   }
 }
 .process {
+  @include breakpoint-less(sm) {
+    margin-bottom: 30px;
+  }
   @include breakpoint-above(md) {
     h2 {
       width: 100vw;
@@ -46,12 +49,12 @@ benoldi-parallax#parallax {
       z-index: -1;
       top: -80px;
 
-      //
       @include breakpoint-less(sm) {
         background-position-y: -89px !important;
         background-position-x: -316px !important;
         background-attachment: initial;
         background-size: 256%!important;
+        margin-bottom: -50px;
       }
 
     }
@@ -59,7 +62,6 @@ benoldi-parallax#parallax {
 }
 .container.steps {
   .row {
-
     display: flex;
     margin-bottom: 60px;
     @include breakpoint-less(sm) {
@@ -74,8 +76,6 @@ benoldi-parallax#parallax {
 
     >* {
       width: 50%;
-
-
       &:first-child {
         margin-right: 60px;
       }

@@ -12,6 +12,7 @@ h1 {
   @include breakpoint-less(sm) {
     line-height: 1em;
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -42,14 +43,16 @@ p {
   margin: 80px auto;
   @include breakpoint-less(sm) {
     flex-direction: column;
+    margin: 15px auto;
+    margin-bottom: 0;
   }
 
   > div {
     @include breakpoint-less(sm) {
-      margin-left: 0;
+      margin: 0;
     }
     &:first-of-type {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
   }
 }

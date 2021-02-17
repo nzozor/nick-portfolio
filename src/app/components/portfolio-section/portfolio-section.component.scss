@@ -2,12 +2,10 @@
 @import "../../../scss/helpers/mixins";
 .portfolio-container {
   padding: 15px;
-  @include breakpoint-less(md) {
+  @include breakpoint-less(sm) {
     padding: 0
   }
-  @include breakpoint-above(md) {
-    margin: auto 15px;
-  }
+
   padding: 0;
   .row {
     @include breakpoint-above(md) {
@@ -18,13 +16,22 @@
   }
 
   .portfolio-title-overlay{
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint-above(sm) {
+      padding: 15px;
+
+    }
     .portfolio-item {
       cursor: pointer;
       padding: 25px;
       padding-top: 0;
+      @include breakpoint-above(sm) {
+        padding: 15px;
+        max-width: 50%;
+      }
       @include breakpoint-above(md) {
         padding: 15px;
-
         max-width: 33.3%;
       }
       a {
