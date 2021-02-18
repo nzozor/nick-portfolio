@@ -6,7 +6,24 @@
     </h2>
   </benoldi-hero-section>
   <div class="img-wrapper">
-    <img src="{{imgUrl}}" alt="">
+    <picture>
+      <source
+        media="(max-width: 599px)"
+        srcset="
+          {{imgUrl}}
+        "
+      />
+      <source
+        media="(min-width: 600px)"
+        srcset="
+          {{imgUrl}}
+        "
+      />
+      <img
+        src="{{imgUrl}}"
+        alt="Elsa benoldi Graphic Design book"
+      />
+    </picture>
   </div>
   <!-- <div class="elsa" [ngStyle]="{ 'background-image': 'url(' + imgUrl + ')' }"></div> -->
   <h3>Why work with me</h3>

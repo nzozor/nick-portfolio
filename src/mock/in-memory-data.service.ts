@@ -4,7 +4,6 @@ import { RequestInfo, ResponseOptions } from 'angular-in-memory-web-api/interfac
 import { Observable, of } from 'rxjs';
 import { Project } from 'src/app/shared/models/project';
 import { BENOLDI_PROJECTS } from './projects';
-import { v4 as uuidv4 } from 'uuid';
 
 interface Response {
   status: number;
@@ -112,7 +111,8 @@ export class InMemoryDataService implements InMemoryDataService {
   private getWorkThumbnails(reqInfo: RequestInfo): Observable<ResponseOptions> {
     const thumbnails = this.projects.map((project: Project) => ({
       projectName: project.projectName,
-      thumbnailUrl: project.thumbnailUrl,
+      thumbnailUrlLarge: project.thumbnailUrlLarge,
+      thumbnailUrlSmall: project.thumbnailUrlSmall,
       imgAlt: project.imgAlt,
       projectId: project.projectId
     }));
@@ -128,8 +128,8 @@ export class InMemoryDataService implements InMemoryDataService {
   private getHomePageThumbnails(reqInfo: RequestInfo): Observable<ResponseOptions> {
     const projects = this.projects.slice(0, 9);
     const thumbnails = projects.map((project: Project) => ({
-      projectName: project.projectName,
-      thumbnailUrl: project.thumbnailUrl,
+      thumbnailUrlLarge: project.thumbnailUrlLarge,
+      thumbnailUrlSmall: project.thumbnailUrlSmall,
       imgAlt: project.imgAlt,
       projectId: project.projectId
     }));

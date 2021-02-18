@@ -24,7 +24,7 @@ import { InMemoryDataService } from 'src/mock/in-memory-data.service';
     FontAwesomeModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
+      InMemoryDataService, { dataEncapsulation: false, delay: 0 }
     )
   ],
   providers: [],

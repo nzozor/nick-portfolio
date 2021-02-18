@@ -7,7 +7,14 @@
     <div class="portfolio-item" *ngFor="let thumbnail of thumbnails" (click)="goToProjectPage(thumbnail.projectId || '')">
       <a>
         <div class="portfolio-img">
-          <img src="{{thumbnail.thumbnailUrl}}" alt="{{thumbnail.imgAlt}}" />
+          <!-- <img [attr.loading]="loading" src="{{thumbnail.thumbnailUrl}}" alt="{{thumbnail.imgAlt}}" /> -->
+          <!-- <img src="{{thumbnail.thumbnailUrlLarge}}"> -->
+
+          <picture>
+            <source media="(max-width: 599px)" srcset="{{thumbnail.thumbnailUrlSmall}}">
+            <source media="(min-width: 600px)" srcset="{{thumbnail.thumbnailUrlLarge}}">
+            <img [attr.loading]="loading" src="{{thumbnail.thumbnailUrlLarge}}" alt="{{thumbnail.imgAlt}}">
+          </picture>
         </div>
         <div class="portfolio-hover">
           <div class="portfolio-hover-box">

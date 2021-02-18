@@ -9,7 +9,7 @@ import { Thumbnail } from 'src/app/shared/models/project';
 })
 export class PortfolioSectionComponent implements OnInit {
   @Input() thumbnails: Thumbnail[];
-
+  @Input() loading: string;
   constructor(private router: Router) { }
 
   ngOnInit(): void {

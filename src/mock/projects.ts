@@ -1,5 +1,4 @@
 import { Project } from 'src/app/shared/models/project';
-
 export const BENOLDI_PROJECTS: Project[] = [
   {
     projectId: '26404b33-0516-48b0-9152-b79abef9e211',
@@ -9,22 +8,28 @@ export const BENOLDI_PROJECTS: Project[] = [
     clientUrl: 'http://www.beautiskinclinic.com',
     services:  'Logo Design, Web Design, Brochure',
     country: 'UK',
-    mainImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design.jpg',
-    thumbnailUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website.jpg',
+    mainImgUrlSmall: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design.jpg',
+    mainImgUrlLarge: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design.jpg',
+    thumbnailUrlSmall: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website2.jpg',
+    thumbnailUrlLarge: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website2.jpg',
     galleryImgs: [
       {
+        smallImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-logo-design.jpg',
         largeImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-logo-design.jpg',
         type: 'full',
       },
       {
+        smallImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-salon-brochure.jpg',
         largeImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-salon-brochure.jpg',
         type: 'vertical',
       },
       {
+        smallImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-beauty-brochure.jpg',
         largeImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-beauty-brochure.jpg',
         type: 'vertical',
       },
       {
+        smallImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-mobileapp.jpg',
         largeImgUrl: '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-mobileapp.jpg',
         type: 'full',
       },

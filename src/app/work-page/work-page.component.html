@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Work</h1>
   <ng-container *ngIf="$thumbnails | async as thumbnails">
-    <benoldi-portfolio-section id="work" [thumbnails]="thumbnails"></benoldi-portfolio-section>
+    <benoldi-portfolio-section id="work" [thumbnails]="thumbnails" [loading]="'lazy'"></benoldi-portfolio-section>
   </ng-container>
 </div>
 

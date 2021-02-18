@@ -4,7 +4,11 @@
     <h2>{{project.projectDescription}}</h2>
   </benoldi-hero-section>
   <div class="container">
-    <img src="{{project.mainImgUrl}}" alt="{{project.imgAlt}}">
+    <picture>
+      <source media="(max-width: 599px)" srcset="{{project.mainImgUrlSmall}}">
+      <source media="(min-width: 600px)" srcset="{{project.mainImgUrlLarge}}">
+      <img src="{{project.mainImgUrlLarge}}" alt="{{project.imgAlt}}">
+    </picture>
     <div class="project-insights">
       <div>
         <h3>Client</h3>
@@ -31,7 +35,11 @@
     </div>
     <div class="gallery">
       <div class="item" *ngFor="let item of project.galleryImgs" [ngClass]="imageTypeClass(item)">
-        <img src="{{item.largeImgUrl}}" alt="{{item.imgAlt}}">
+        <picture>
+          <source media="(max-width: 599px)" srcset="{{project.mainImgUrlSmall}}">
+          <source media="(min-width: 600px)" srcset="{{item.largeImgUrl}}">
+          <img src="{{item.largeImgUrl}}" alt="{{item.imgAlt}}">
+        </picture>
       </div>
     </div>
     <div class="navigation">

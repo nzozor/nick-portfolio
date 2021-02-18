@@ -1,10 +1,12 @@
 
 export interface Project {
   projectId?: string;
-  thumbnailUrl: string;
+  thumbnailUrlSmall?: string;
+  thumbnailUrlLarge: string;
   projectName: string;
   projectDescription?: string;
-  mainImgUrl: string;
+  mainImgUrlLarge: string;
+  mainImgUrlSmall?: string;
   galleryImgs: GalleryImg[];
   clientName: string;
   services: string;
@@ -21,4 +23,4 @@ export interface GalleryImg {
   type: 'full' | 'vertical' | 'half';
 }
 
-export type Thumbnail = Pick<Project, 'projectName' |'thumbnailUrl' | 'imgAlt' | 'projectId'>;
+export type Thumbnail = Pick<Project, 'projectName' |'thumbnailUrlLarge' | 'thumbnailUrlSmall'| 'imgAlt' | 'projectId'>;
