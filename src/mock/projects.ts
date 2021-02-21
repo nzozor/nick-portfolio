@@ -10,40 +10,40 @@ export const BENOLDI_PROJECTS: Project[] = [
     services: 'Logo Design, Web Design, Brochure',
     country: 'UK',
     mainImgUrlSmall:
-      '/assets/images/projects/Beauti/Beauti-skin-clinic-london-website-design-mobile.jpg',
+      '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design-mobile.jpg',
     mainImgUrlLarge:
-      '/assets/images/projects/Beauti/Beauti-skin-clinic-london-website-design-main.jpg',
+      '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design-main.jpg',
     thumbnailUrlSmall:
-      '/assets/images/projects/Beauti/Beauti-skin-clinic-london-website-design-mobile.jpg',
+      '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design-mobile.jpg',
     thumbnailUrlLarge:
-      '/assets/images/projects/Beauti/Beauti-skin-clinic-london-website-thumb.jpg',
+      '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-thumb.jpg',
     galleryImgs: [
       {
         smallImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-logo-design-mobile.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-logo-design-mobile.jpg',
         largeImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-logo-design-big.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-logo-design-big.jpg',
         type: 'full'
       },
       {
         smallImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-salon-brochure-mobile.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-salon-brochure-mobile.jpg',
         largeImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-salon-brochure.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-salon-brochure.jpg',
         type: 'half'
       },
       {
         smallImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-beauty-brochure-mobile.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-beauty-brochure-mobile.jpg',
         largeImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-beauty-brochure.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-beauty-brochure.jpg',
         type: 'half'
       },
       {
         smallImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-website-mobileapp-mobile.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-mobileapp-mobile.jpg',
         largeImgUrl:
-          '/assets/images/projects/Beauti/Beauti-skin-clinic-london-website-mobileapp-big.jpg',
+          '/assets/images/projects/beauti/Beauti-skin-clinic-london-website-mobileapp-big.jpg',
         type: 'full'
       }
     ],
