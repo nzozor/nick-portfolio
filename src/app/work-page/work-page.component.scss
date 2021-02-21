@@ -2,16 +2,40 @@
 
 h1 {
   margin-top: 140px;
-  margin-left: 30px;
+  margin-left: 15px;
+
   @include breakpoint-less(sm) {
     margin-top: 50px;
-    margin-left: 25px;
+    margin-left: 12.5px;
 
   }
 }
+
 .container {
+  @include breakpoint-above(lg) {
+    padding: 0;
+  }
   @include breakpoint-less(lg) {
     max-width: 100%;
-    padding: 0;
+    padding: 15px;
+  }
+  @include breakpoint-less(sm) {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  benoldi-portfolio-section {
+    ::ng-deep {
+      .portfolio-container {
+        .portfolio-title-overlay {
+          padding: 0;
+          .portfolio-item {
+            @include breakpoint-less(sm) {
+              padding: 0  10px 25px;
+            }
+          }
+        }
+      }
+    }
   }
 }

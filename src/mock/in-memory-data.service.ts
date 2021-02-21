@@ -19,11 +19,7 @@ export class InMemoryDataService implements InMemoryDataService {
   projects: Project[];
   createDb(): {} { return {}; }
   constructor() {
-    this.projects = BENOLDI_PROJECTS;
-    this.projects = [...this.projects, ...this.projects];
-    this.projects = [...this.projects, ...this.projects];
-    this.projects = [...this.projects, ...this.projects];
-    this.projects = [...this.projects, ...this.projects];
+    this.projects = [...BENOLDI_PROJECTS, ...BENOLDI_PROJECTS ];
    }
 
   post(reqInfo: RequestInfo): void{

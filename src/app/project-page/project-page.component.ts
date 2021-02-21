@@ -27,7 +27,6 @@ export class ProjectPageComponent implements OnInit {
     return {
       large : item.type === 'full',
       half: item.type === 'half',
-      vertical: item.type === 'vertical'
     };
   }
 

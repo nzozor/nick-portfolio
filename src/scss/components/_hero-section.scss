@@ -1,13 +1,16 @@
 benoldi-hero-section.model-2 {
   h2 {
-    font-size: 1.5em;
-    line-height: 1.25em;
+    font-size: 1.4em;
+    line-height: 1.25;
+    font-weight: 100;
   }
-    > div {
-      padding-top: 100px!important;
-      margin-bottom: 0!important;
-      @include breakpoint-less(sm) {
-        padding-top: 50px!important;
-      }
+
+  >div {
+    padding-top: 100px !important;
+    margin-bottom: 0 !important;
+
+    @include breakpoint-less(sm) {
+      padding-top: 50px !important;
     }
+  }
 }

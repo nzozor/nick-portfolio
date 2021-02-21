@@ -14,6 +14,12 @@
       margin-top: 50px;
     }
   }
+
+  h2 {
+    font-size: 1.4em;
+    line-height: 1.25;
+    font-weight: 100;
+  }
 }
 .process {
   @include breakpoint-less(sm) {

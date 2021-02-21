@@ -43,7 +43,7 @@
           position: relative;
           overflow: hidden;
           img {
-            @include transform(scale(1.04));
+            // @include transform(scale(1.04));
             width: 100%;
             @include transition(transform 0.46s cubic-bezier(0.165, 0.84, 0.44, 1));
           }

@@ -20,7 +20,7 @@ export interface GalleryImg {
   mediumImgUrl?: string;
   smallImgUrl?: string;
   imgAlt?: string;
-  type: 'full' | 'vertical' | 'half';
+  type: 'full'  |  'half';
 }
 
 export type Thumbnail = Pick<Project, 'projectName' |'thumbnailUrlLarge' | 'thumbnailUrlSmall'| 'imgAlt' | 'projectId'>;
