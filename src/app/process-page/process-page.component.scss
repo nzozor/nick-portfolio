@@ -38,10 +38,10 @@ benoldi-parallax#parallax {
   @include breakpoint-less(sm) {
     .overlay {
       background-color: white;
-      height: 422%;
+      height: 100vh;
       position: absolute;
-      top: -500px;
-      width: 422%;
+      top: -91px;
+      width: 100vw;
       z-index: -1;
       opacity: 0.3;
       left: -1000px;
@@ -56,7 +56,7 @@ benoldi-parallax#parallax {
       top: -80px;
 
       @include breakpoint-less(sm) {
-        background-position-y: -89px !important;
+        background-position-y: -25px !important;
         background-position-x: -316px !important;
         background-attachment: initial;
         background-size: 256%!important;

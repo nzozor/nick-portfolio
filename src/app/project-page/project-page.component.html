@@ -19,7 +19,7 @@
       <div>
         <h3>Services</h3>
         <p>
-          {{project.clientName}}
+          {{project.services  }}
         </p>
       </div>
       <div *ngIf="project.clientUrl; else countryBlock">
@@ -40,7 +40,7 @@
     <div class="gallery">
       <div class="item" *ngFor="let item of project.galleryImgs" [ngClass]="imageTypeClass(item)">
         <picture>
-          <source media="(max-width: 599px)" srcset="{{project.mainImgUrlSmall}}">
+          <source media="(max-width: 599px)" srcset="{{item.smallImgUrl}}">
           <source media="(min-width: 600px)" srcset="{{item.largeImgUrl}}">
           <img src="{{item.largeImgUrl}}" alt="{{item.imgAlt}}">
         </picture>

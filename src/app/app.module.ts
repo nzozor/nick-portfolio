@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/mock/in-memory-data.service';
+import { EnterViewportDirective } from './shared/directives/enter-viewport.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { InMemoryDataService } from 'src/mock/in-memory-data.service';
     HeaderComponent,
     FullscreenMenuComponent,
     FooterComponent,
+    // EnterViewportDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

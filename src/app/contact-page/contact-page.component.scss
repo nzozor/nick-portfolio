@@ -1,11 +1,13 @@
 @import "../../scss/helpers/mixins";
 
 .container {
-  margin-top: 120px;
+  margin-top: 133px;
+  padding: 0 25px;
   @include breakpoint-less(sm) {
     margin-top: 50px;
   }
 }
+
 h1 {
   font-weight: 100;
   margin-left: 15px;
@@ -29,6 +31,9 @@ p {
   line-height:1.4em;
   font-weight: 100;
   margin-top: 20px;
+  @include breakpoint-less(md) {
+    margin-top: 15px;
+  }
 }
 
 .where-to-meet, .selfie {
@@ -41,32 +46,42 @@ p {
 
 .where-to-meet {
   margin: 80px auto;
+
   @include breakpoint-less(sm) {
     flex-direction: column;
     margin: 15px auto;
     margin-bottom: 0;
+    margin-top: 45px;
   }
 
   > div {
+    margin: 0;
+    padding: 15px;
+    @include breakpoint-less(md) {
+      margin-top: 10px;
+    }
     @include breakpoint-less(sm) {
       margin: 0;
+      padding: 0;
     }
     &:first-of-type {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
   }
 }
 
 .selfie {
-  margin: 15px;
-  @include breakpoint-less(sm) {
+  margin: 30px;
+  @include breakpoint-less(md) {
     flex-direction: column;
-    margin: 10px;
+    // margin: 10px;
+    margin: 25px;
+    margin-top: 20px;
   }
   > div {
   margin: 15px;
   @include breakpoint-less(sm) {
-    margin: 10px;
+    margin: 10px 0;
   }
     img {
       width: 100%;

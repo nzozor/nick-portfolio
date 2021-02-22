@@ -25,6 +25,7 @@ h1 {
   margin-bottom: 30px;
   @include breakpoint-less(md) {
     margin-top: 0;
+    line-height: 1.1;
   }
 }
 

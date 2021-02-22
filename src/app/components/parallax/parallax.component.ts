@@ -22,7 +22,7 @@ export class ParallaxComponent implements OnInit, AfterViewInit {
     this.parallaxDiv = this.document.querySelector('.parallax') as HTMLDivElement;
     this.parallaxDiv.style.backgroundPositionY = this.backgroundSettings.positionY + 'px';
     this.initialTop = parseInt(this.parallaxDiv.style.backgroundPositionY, 10);
-    this.parallaxDiv.style.height = this.backgroundSettings.height + 'vh';
+    // this.parallaxDiv.style.height = this.backgroundSettings.height + 'vh';
   }
 
   @HostListener('window:scroll')

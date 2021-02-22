@@ -19,7 +19,7 @@ export class InMemoryDataService implements InMemoryDataService {
   projects: Project[];
   createDb(): {} { return {}; }
   constructor() {
-    this.projects = [...BENOLDI_PROJECTS, ...BENOLDI_PROJECTS ];
+    this.projects = BENOLDI_PROJECTS;
    }
 
   post(reqInfo: RequestInfo): void{
@@ -127,7 +127,8 @@ export class InMemoryDataService implements InMemoryDataService {
       thumbnailUrlLarge: project.thumbnailUrlLarge,
       thumbnailUrlSmall: project.thumbnailUrlSmall,
       imgAlt: project.imgAlt,
-      projectId: project.projectId
+      projectId: project.projectId,
+      projectName: project.projectName
     }));
     return reqInfo.utils.createResponse$((): ResponseOptions => {
       const options: ResponseOptions = {

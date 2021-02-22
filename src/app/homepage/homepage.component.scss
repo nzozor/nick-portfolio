@@ -10,4 +10,7 @@ h1 {
   @include breakpoint-above(md) {
     font-size: 2.6em;
   }
+  @include breakpoint-less(sm) {
+    font-size: 2.3em;
+  }
 }

@@ -13,8 +13,9 @@
   h3 {
     font-family: degular;
     font-weight: 500;
-    font-size: 1.7em;
+    font-size: 1.5em;
     margin-bottom: 0;
+    line-height: 1.7;
   }
 
   p {
@@ -50,6 +51,9 @@ img {
     &.half,
     &.vertical {
       width: 50%;
+      @include breakpoint-less(sm) {
+        width: 100%;
+      }
     }
   }
 }
@@ -86,8 +90,18 @@ h2.hero {
   }
 
   .btn-prev, .btn-next {
-    @include breakpoint-less(sm) {
+    // @include breakpoint-less(sm) {
       margin: 0;
+    // }
+
+    span {
+      line-height: 0;
+      margin: 5px 0 0;
+      padding: 5px 10px;
+      opacity: 0;
+      @include breakpoint-less(sm) {
+        display: none;
+      }
     }
 
     &:hover {
