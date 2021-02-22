@@ -1,4 +1,5 @@
-import { AfterViewInit, Directive, ElementRef, EventEmitter, Host, HostBinding, Output } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Directive, ElementRef, EventEmitter, Host, HostBinding, Inject, Output, PLATFORM_ID } from '@angular/core';
 
 @Directive({
   selector: '[benoldiEnterViewport]'
@@ -8,11 +9,11 @@ export class EnterViewportDirective implements AfterViewInit {
   private _observer: IntersectionObserver;
   @HostBinding('class') elementVisibilityClass: string;
 
-  constructor(@Host() private _elementRef: ElementRef) { }
+  constructor(@Host() private _elementRef: ElementRef, @Inject(PLATFORM_ID) private plateformId: {}) { }
   ngAfterViewInit(): void {
-    const options = { root: null, rootMargin: "0px", threshold: 0.0 };
-    this._observer = new IntersectionObserver(this._callback, options);
-    if (this._observer) {
+    if (isPlatformBrowser(this.plateformId)) {
+      const options = { root: null, rootMargin: "0px", threshold: 0.0 };
+      this._observer = new IntersectionObserver(this._callback, options);
       this._observer.observe(this._elementRef.nativeElement);
     }
   }
