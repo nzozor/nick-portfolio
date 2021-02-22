@@ -18,7 +18,11 @@ export class EnterViewportDirective implements AfterViewInit {
     }
   }
 
-  ngOnDestroy() { this._observer.disconnect(); }
+  ngOnDestroy() {
+    if (isPlatformBrowser(this.plateformId)) {
+      this._observer.disconnect();
+    }
+  }
 
   private _callback = (entries: any) => {
     entries.forEach((entry: any) => {
