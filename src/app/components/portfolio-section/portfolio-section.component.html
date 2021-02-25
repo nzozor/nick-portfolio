@@ -4,8 +4,8 @@
     class="row  portfolio-grid portfolio-title-overlay"
   >
     <!-- Portfolio Item -->
-    <div  class="portfolio-item" benoldiEnterViewport *ngFor="let thumbnail of thumbnails" (click)="goToProjectPage(thumbnail.projectId || '')" >
-      <a>
+    <div  class="portfolio-item" benoldiEnterViewport *ngFor="let thumbnail of thumbnails">
+      <a [routerLink]="['/project/', thumbnail.projectId]" >
         <div class="portfolio-img">
           <picture>
             <source media="(max-width: 599px)" srcset="{{thumbnail.thumbnailUrlSmall}}">

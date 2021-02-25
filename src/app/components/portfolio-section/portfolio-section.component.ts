@@ -15,9 +15,5 @@ export class PortfolioSectionComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  goToProjectPage(projectId: string): void {
 
-    const id = projectId || null;
-    this.router.navigate([`project/${projectId}`]);
-  }
 }

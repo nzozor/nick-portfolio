@@ -3,7 +3,9 @@
   <div class="where-to-meet">
     <div>
       <h2>Email</h2>
-      <p>elsabenoldi@gmail.com</p>
+      <p class="email" (click)="copyToClipBoard()">elsabenoldi@gmail.com</p>
+      <div id="snackbar" [class.show]="showSnackBar">Elsa email address copied to clipboard!</div>
+
     </div>
     <div>
       <h2>Where to meet me</h2>

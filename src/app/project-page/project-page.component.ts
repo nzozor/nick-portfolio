@@ -1,10 +1,11 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { GalleryImg, Project } from '../shared/models/project';
 import { DataService } from '../shared/services/data.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'benoldi-project-page',
@@ -13,32 +14,39 @@ import { DataService } from '../shared/services/data.service';
 })
 export class ProjectPageComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private dataService: DataService, private viewPortScroller: ViewportScroller) { }
-  project$: Observable<Project>;
-  nextProject$: Observable<Project>;
-  prevProject$: Observable<Project>;
+  constructor(
+    public location: Location,
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    private viewPortScroller: ViewportScroller) { }
+  project: Project;
+  projSub: Subscription;
 
   ngOnInit(): void {
-    const id = this.route.snapshot.params.id;
-    this.project$ = this.dataService.fetchProjectDetails(id)  ;
-    this.prevProject$ = this.dataService.fetchPreviousProjectDetails(id);
-    this.nextProject$ = this.dataService.fetchNextProjectDetails(id);
+    const currentProjectId = this.route.snapshot.params.id;
+    this.projSub = this.dataService.fetchProjectDetails(currentProjectId).subscribe(project => this.project = project);
   }
 
   imageTypeClass(item: GalleryImg): {} {
     return {
-      large : item.type === 'full',
+      large: item.type === 'full',
       half: item.type === 'half',
     };
   }
 
   next(): void {
-    this.project$ = this.nextProject$;
+    this.dataService.fetchNextProjectDetails(this.project.projectId as string)
+    .subscribe(data => {
+      this.project = data; this.location.go(`project/${data.projectId}`);
+    });
     this.scrollTop();
   }
 
   prev(): void {
-    this.project$ = this.prevProject$;
+    this.dataService.fetchPreviousProjectDetails(this.project.projectId as string)
+      .subscribe(data => {
+        this.project = data; this.location.go(`project/${data.projectId}`);
+      });
     this.scrollTop();
   }
 

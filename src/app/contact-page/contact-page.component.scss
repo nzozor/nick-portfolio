@@ -34,6 +34,23 @@ p {
   @include breakpoint-less(md) {
     margin-top: 15px;
   }
+  &.email {
+    cursor: pointer;
+    &::after {
+      opacity: 0;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      content: url('../../assets/images/content_copy-black-18dp.svg');
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 1px;
+    }
+
+    &:hover::after {
+      opacity: 1;
+
+    }
+  }
 }
 
 .where-to-meet, .selfie {
@@ -74,7 +91,6 @@ p {
   margin: 30px;
   @include breakpoint-less(md) {
     flex-direction: column;
-    // margin: 10px;
     margin: 25px;
     margin-top: 20px;
   }

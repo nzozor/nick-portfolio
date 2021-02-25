@@ -1,7 +1,7 @@
 import { Project } from 'src/app/shared/models/project';
 export const BENOLDI_PROJECTS: Project[] = [
   {
-    projectId: "26404b33-0516-48b0-9152-b79abef9e211",
+    projectId: "Beauti",
     projectName: "Beauti",
     projectDescription:
       "Refreshed brand identity for a beauty and skin clinic chain in London. The visual language has evolved to feel more inclusive, open and sophisticated. The customized typography matches soft curves and straight lines and the letters reveal sinuous shapes. The identity captures its unique mix of playfulness and harmony.",
@@ -50,7 +50,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Beauti Skin Clinic London | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0werwegg516-48b0-9152-b79abef9e211",
+    projectId: "Italy-at-Frieze",
     projectName: "Italy at Frieze",
     projectDescription:
       "Catalogue design for the Italy at Frieze exhibition that was held at the Embassy on Italy in London. The one-of-a-kind event in London was part of the programme of the art fairs Frieze London and Frieze Masters, which draw collectors and art lovers from around the world.",
@@ -92,7 +92,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Italy at Frieze | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "264eeeeAAA04b33-0516-48b0-9152-b79abef9e211",
+    projectId: "De-Stress-Me",
     projectName: "De-Stress Me",
     projectDescription:
       "Branding design project for a new wellness & spa platform which provides useful information about new top spa offers, body care products and best beauty clinics in London. This project is currently work-in-progress.",
@@ -134,7 +134,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "De–Stress Me | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "264012312345b33-0516-48b0-9152-b79abef9e211",
+    projectId: "Faceology",
     projectName: "Faceology",
     projectDescription:
       "Branding project for a global beauty chain specialized in facial treatments. The first shop has been opend in Moscow, Russia. The project includes logo design, packaging, stationery, signs, uniform and website design.",
@@ -190,7 +190,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Faceology | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-48b0-9152-b79abef9e25335311",
+    projectId: "Nailor",
     projectName: "Nailor",
     projectDescription:
       "Brand identity for a new professional line of nail polishes. The project includes logo and labels design. Nailor is a solution for creative professionals which offers best-selling shades of gel and nail polish to create a true masterpiece.",
@@ -246,7 +246,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Nailor | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-48b0-9152-b79abef5786789e211",
+    projectId: "Tenten",
     projectName: "Tenten",
     projectDescription:
       "Branding project for a worldwide nail salon chain. Starting from the logo design I’ve been asked to developed all the branding assets including: biz cards, facade design, packaging and bags, staff uniform and website. The custom typography which matches soft curves and straight shapes, evokes the idea of fingers that create letters. These bold and distinctive shapes, combined with coloured semi-circles that represent polished nails, reveals the playful spirit of a fresh new manicure and pedicure chain.",
@@ -316,7 +316,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Tenten | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-48b0-9787878152-b79abef9e211",
+    projectId: "Who-Be-Me",
     projectName: "Who Be Me",
     projectDescription:
       "Catalogue design for Kofi Setordji’s exhibition in Accra, Ghana. In this exhibition, Nada Moukarzel, founder of La Maison and curator of Who Be Me, creates a series of unique, living environments in which artist Kofi Setordji expresses and exhibits new artworks.",
@@ -358,7 +358,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Who Be Me | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-4b555b8b0-9152-b79abef9e211",
+    projectId: "Palchiki",
     projectName: "Palchiki",
     projectDescription:
       "Rebranding project for a russian retail chain of nail services (manicure and pedicure). Starting from the logo restyling, I developed all the branding assets among which: packaging and bags, pattern design, biz cards, price list and phone case.",
@@ -400,7 +400,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Palchiki | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-056m6m616-48b0-9152-b79abef9e211",
+    projectId: "Baumann-Skin-Types",
     projectName: "Baumann Skin Types",
     projectDescription:
       "Baumann Skin Types flowers poster and card design. This scientific methodology is used to diagnose the skin type and match to a customized skincare regimen. For each skin type I designed the related printed card which shows a drawing of the flower that embodies the characteristics of that specific skin type. This project is part of the branding for Faceology, a global beauty chain specialized in facial treatments.",
@@ -435,7 +435,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Baumann Skin Types | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-48b0-9152-bm7m7m779abef9e211",
+    projectId: "Parma-360",
     projectName: "Parma 360",
     projectDescription:
       "Identity project for a contemporary art festival in Parma, Italy. The branding project includes: logo, signs, catalogue, city map and merchandising.",
@@ -519,7 +519,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Parma 360 | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-48b0-9152-ugggmgmb79abef9e211",
+    projectId: "Hito-Steyerl",
     projectName: "Hito Steyerl",
     projectDescription:
       "This is a conceptual design inspired by the Hito Steyerl’s exhibition at Serpentine Galleries in London. Hito Steyerl is a German filmmaker and artist whose work explores the complexities of the digital world, art, capitalism, and the implications of Artificial Intelligence for society. The design displays a closeup frame of one of the video which plays in the exhibition. The video shows abstract floating flowers on a black background.",
@@ -561,7 +561,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Hito Steyerl | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-4vbhg6898b0-9152-b79abef9e211",
+    projectId: "Summer-Poster",
     projectName: "Summer Poster",
     projectDescription:
       "Personal illustration inspired by the summer season.",
@@ -589,7 +589,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Summer Poster | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-48b0-915rrr3562-b79abef9e211",
+    projectId: "Threadless-Rug",
     projectName: "Threadless Rug",
     projectDescription:
       "Threadless Collection is the result of a fusion between art and technology. It’s an experimental encounter between human aesthetic choices and digital re-interpretation. The designer draws circular fractal shapes using an accurate colour selection. The computer breaks the geometrical coherence of these images transforming them into asymmetrical simplified new compositions. The unpredictability of the result generates novel graphic visuals.",
@@ -624,7 +624,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Threadless Rug | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "26404b33-0516-48jmghfrhj7b0-9152-b79abef9e211",
+    projectId: "Salumi-Italiani",
     projectName: "Salumi Italiani",
     projectDescription:
       "Corporate book which provides historical information about the Italian meat industry. It is supported by evocative pictures and printed on refined paper.",
@@ -659,7 +659,7 @@ export const BENOLDI_PROJECTS: Project[] = [
         smallImgUrl:
           "/assets/images/projects/salumitaliani/salumi-italiani-luxury-book-editorial-design-parma-ham-mobile.jpg",
         largeImgUrl:
-          "/assets/images/projects/salumitaliani/salumi-italiani-luxury-book-editorial-design-parma-ham-half.jpg",
+          "/assets/images/projects/salumitaliani/salumi-italiani-luxury-book-editorial-design-parma-ham-big.jpg",
         type: "full"
       }
     ],
