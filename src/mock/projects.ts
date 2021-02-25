@@ -1,7 +1,7 @@
 import { Project } from 'src/app/shared/models/project';
 export const BENOLDI_PROJECTS: Project[] = [
   {
-    projectId: "Beauti",
+    projectId: "beauti",
     projectName: "Beauti",
     projectDescription:
       "Refreshed brand identity for a beauty and skin clinic chain in London. The visual language has evolved to feel more inclusive, open and sophisticated. The customized typography matches soft curves and straight lines and the letters reveal sinuous shapes. The identity captures its unique mix of playfulness and harmony.",
@@ -50,7 +50,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Beauti Skin Clinic London | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "Italy-at-Frieze",
+    projectId: "italy-at-frieze",
     projectName: "Italy at Frieze",
     projectDescription:
       "Catalogue design for the Italy at Frieze exhibition that was held at the Embassy on Italy in London. The one-of-a-kind event in London was part of the programme of the art fairs Frieze London and Frieze Masters, which draw collectors and art lovers from around the world.",
@@ -59,19 +59,19 @@ export const BENOLDI_PROJECTS: Project[] = [
     services: "Catalogue Design",
     country: "UK",
     mainImgUrlSmall:
-      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-mobile.jpg",
+      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-scheggi-mobile.jpg",
     mainImgUrlLarge:
-      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-main.jpg",
+      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-scheggi-main.jpg",
     thumbnailUrlSmall:
-      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-mobile.jpg",
+      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-scheggi-mobile.jpg",
     thumbnailUrlLarge:
-      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-thumb.jpg",
+      "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-scheggi-thumb.jpg",
     galleryImgs: [
       {
         smallImgUrl:
-          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-scheggi-mobile.jpg",
+          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-mobile.jpg",
         largeImgUrl:
-          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-scheggi-big.jpg",
+          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-catalogue-big.jpg",
         type: "full"
       },
       {
@@ -83,7 +83,7 @@ export const BENOLDI_PROJECTS: Project[] = [
       },
       {
         smallImgUrl:
-          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-embassy-pistoletto-mobile.jpg",
+          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-embassy-pistoletto-mobile",
         largeImgUrl:
           "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-embassy-pistoletto-big.jpg",
         type: "full"
@@ -190,7 +190,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Faceology | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "Nailor",
+    projectId: "nailor",
     projectName: "Nailor",
     projectDescription:
       "Brand identity for a new professional line of nail polishes. The project includes logo and labels design. Nailor is a solution for creative professionals which offers best-selling shades of gel and nail polish to create a true masterpiece.",
@@ -199,13 +199,13 @@ export const BENOLDI_PROJECTS: Project[] = [
     services: "Logo, Packaging, Biz Card",
     country: "Latvia",
     mainImgUrlSmall:
-      "/assets/images/projects/nailor/nailor-nail-polish-manicure-label-packaging-mobile.jpg",
+      "/assets/images/projects/nailor/nailor-nail-polish-manicure-business-card-design-mobile.jpg",
     mainImgUrlLarge:
-      "/assets/images/projects/nailor/nailor-nail-polish-manicure-label-packaging-main.jpg",
+      "/assets/images/projects/nailor/nailor-nail-polish-manicure-business-card-design-main.jpg",
     thumbnailUrlSmall:
-      "/assets/images/projects/nailor/nailor-nail-polish-manicure-label-packaging-mobile.jpg",
+      "/assets/images/projects/nailor/nailor-nail-polish-manicure-business-card-design-mobile.jpg",
     thumbnailUrlLarge:
-      "/assets/images/projects/nailor/nailor-nail-polish-manicure-label-packaging-thumb.jpg",
+      "/assets/images/projects/nailor/nailor-nail-polish-manicure-business-card-design-thumb.jpg",
     galleryImgs: [
       {
         smallImgUrl:
@@ -223,9 +223,9 @@ export const BENOLDI_PROJECTS: Project[] = [
       },
       {
         smallImgUrl:
-          "/assets/images/projects/nailor/nailor-nail-polish-manicure-business-card-design-mobile.jpg",
+          "/assets/images/projects/nailor/nailor-nail-polish-manicure-label-packaging-mobile.jpg",
         largeImgUrl:
-          "/assets/images/projects/nailor/nailor-nail-polish-manicure-business-card-design-big.jpg",
+          "/assets/images/projects/nailor/nailor-nail-polish-manicure-label-packaging-big.jpg",
         type: "full"
       },
       {
@@ -316,7 +316,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     imgAlt: "Tenten | Elsa Benoldi Graphic Design"
   },
   {
-    projectId: "Who-Be-Me",
+    projectId: "who-be-me",
     projectName: "Who Be Me",
     projectDescription:
       "Catalogue design for Kofi Setordji’s exhibition in Accra, Ghana. In this exhibition, Nada Moukarzel, founder of La Maison and curator of Who Be Me, creates a series of unique, living environments in which artist Kofi Setordji expresses and exhibits new artworks.",
@@ -325,19 +325,19 @@ export const BENOLDI_PROJECTS: Project[] = [
     services: "Catalogue Design",
     country: "Ghana",
     mainImgUrlSmall:
-      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-catalogue-lamaison-kofi-setordji-mobile.jpg",
+      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-art-catalogue-lamaison-kofi-setordji-mobile.jpg",
     mainImgUrlLarge:
-      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-catalogue-lamaison-kofi-setordji-main.jpg",
+      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-art-catalogue-lamaison-kofi-setordji-main.jpg",
     thumbnailUrlSmall:
-      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-catalogue-lamaison-kofi-setordji-mobile.jpg",
+      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-art-catalogue-lamaison-kofi-setordji-mobile.jpg",
     thumbnailUrlLarge:
-      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-catalogue-lamaison-kofi-setordji-thumb.jpg",
+      "/assets/images/projects/whobeme/whobeme-exhibition-ghana-art-catalogue-lamaison-kofi-setordji-thumb.jpg",
     galleryImgs: [
       {
         smallImgUrl:
-          "/assets/images/projects/whobeme/whobeme-exhibition-ghana-art-catalogue-lamaison-kofi-setordji-mobile.jpg",
+          "/assets/images/projects/whobeme/whobeme-exhibition-ghana-catalogue-lamaison-kofi-setordji-mobile.jpg",
         largeImgUrl:
-          "/assets/images/projects/whobeme/whobeme-exhibition-ghana-art-catalogue-lamaison-kofi-setordji-half.jpg",
+          "/assets/images/projects/whobeme/whobeme-exhibition-ghana-catalogue-lamaison-kofi-setordji-half.jpg",
         type: "half"
       },
       {
