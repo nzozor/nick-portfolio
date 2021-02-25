@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
   selector: 'benoldi-contact-page',
@@ -7,23 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) { }
   showSnackBar = false;
   ngOnInit(): void {
   }
 
   copyToClipBoard(): void {
-    const selBox = document.createElement('textarea');
+    const selBox = this.document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
     selBox.value = 'elsabenoldi@gmail.com';
-    document.body.appendChild(selBox);
+    this.document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
+    this.document.execCommand('copy');
+    this.document.body.removeChild(selBox);
     this.showSnackBarElement();
   }
   showSnackBarElement() {

@@ -1,4 +1,6 @@
 @import "../../../scss/helpers/variables";
+@import "../../../scss/helpers/mixins";
+
 :host {
   > div {
     margin-top: 50px;
@@ -37,4 +39,5 @@
     color: white;
     border: 1px solid transparent;
   }
+  @include shakeElement;
 }

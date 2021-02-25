@@ -3,12 +3,12 @@
     <h1>{{project.projectName}}</h1>
     <h2>{{project.projectDescription}}</h2>
   </benoldi-hero-section>
-  <div class="container">
-    <picture>
-      <source media="(max-width: 599px)" srcset="{{project.mainImgUrlSmall}}">
-      <source media="(min-width: 600px)" srcset="{{project.mainImgUrlLarge}}">
-      <img src="{{project.mainImgUrlLarge}}" alt="{{project.imgAlt}}">
-    </picture>
+  <div benoldiEnterViewport class="container" >
+      <picture>
+        <source media="(max-width: 599px)" srcset="{{project.mainImgUrlSmall}}">
+        <source media="(min-width: 600px)" srcset="{{project.mainImgUrlLarge}}">
+        <img src="{{project.mainImgUrlLarge}}" alt="{{project.imgAlt}}">
+      </picture>
     <div class="project-insights">
       <div>
         <h3>Client</h3>
@@ -38,7 +38,7 @@
       </ng-template>
     </div>
     <div class="gallery">
-      <div class="item" *ngFor="let item of project.galleryImgs" [ngClass]="imageTypeClass(item)">
+      <div benoldiEnterViewport class="item" *ngFor="let item of project.galleryImgs" [ngClass]="imageTypeClass(item)">
         <picture>
           <source media="(max-width: 599px)" srcset="{{item.smallImgUrl}}">
           <source media="(min-width: 600px)" srcset="{{item.largeImgUrl}}">
