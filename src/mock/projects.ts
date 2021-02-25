@@ -16,7 +16,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     thumbnailUrlSmall:
       "/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design-mobile.jpg",
     thumbnailUrlLarge:
-      "/assets/images/projects/beauti/Beauti-skin-clinic-london-website-thumb.jpg",
+      "/assets/images/projects/beauti/Beauti-skin-clinic-london-website-design-thumb.jpg",
     galleryImgs: [
       {
         smallImgUrl:

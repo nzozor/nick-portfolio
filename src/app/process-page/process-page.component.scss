@@ -25,6 +25,9 @@
   @include breakpoint-less(sm) {
     margin-bottom: 30px;
   }
+  br {
+    display: none;
+  }
   @include breakpoint-above(md) {
     h2 {
       width: 100vw;
