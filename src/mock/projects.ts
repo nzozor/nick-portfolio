@@ -83,7 +83,7 @@ export const BENOLDI_PROJECTS: Project[] = [
       },
       {
         smallImgUrl:
-          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-embassy-pistoletto-mobile",
+          "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-embassy-pistoletto-mobile.jpg",
         largeImgUrl:
           "/assets/images/projects/italyatfrieze/italy-frieze-contemporary-art-exhibition-embassy-pistoletto-big.jpg",
         type: "full"
