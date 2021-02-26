@@ -2,16 +2,16 @@
   <div class="container">
     <div class="row">
         <ul class="list-inline-dash">
-          <li><a [routerLink]="['']">Home</a></li>
-          <li><a [routerLink]="['/work']">Work</a></li>
-          <li><a [routerLink]="['/about']">About</a></li>
-          <li><a [routerLink]="['/process']">Process</a></li>
-          <li><a [routerLink]="['/contact']">Contact</a></li>
+          <li><a title="Home" [routerLink]="['']">Home</a></li>
+          <li><a title="Work" [routerLink]="['/work']">Work</a></li>
+          <li><a title="About"[routerLink]="['/about']">About</a></li>
+          <li><a title="Process"[routerLink]="['/process']">Process</a></li>
+          <li><a title="Contact" [routerLink]="['/contact']">Contact</a></li>
         </ul>
         <p class="copyright">© 2021 Elsa Benoldi</p>
         <ul class="list-inline-sm social-media" >
-          <li><a class="button-circle" href="https://www.linkedin.com/in/elsabenoldi/" target="_blank"><fa-icon [icon]="faLinkedinIn"></fa-icon></a></li>
-          <li><a class="button-circle" href="https://www.instagram.com/elsabenoldi_design/" target="_blank"><fa-icon [icon]="faInstagramSquare"></fa-icon></a></li>
+          <li><a title="go to linkedin" class="button-circle" href="https://www.linkedin.com/in/elsabenoldi/" target="_blank"><fa-icon [icon]="faLinkedinIn"></fa-icon></a></li>
+          <li><a title="go to instagram" class="button-circle" href="https://www.instagram.com/elsabenoldi_design/" target="_blank"><fa-icon [icon]="faInstagramSquare"></fa-icon></a></li>
         </ul>
     </div><!-- end row -->
   </div><!-- end container -->

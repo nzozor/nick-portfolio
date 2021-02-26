@@ -3,7 +3,7 @@
   <div class="row">
 
     <div id="carousel">
-      <button class="btn-prev" (click)="prev()">
+      <button aria-label="previous preview" class="btn-prev" (click)="prev()">
         <i class="arrow left"></i>
       </button>
       <swiper class="swiper-container" #swiper
@@ -23,7 +23,7 @@
         </div>
       </ng-template>
     </swiper>
-    <button class="btn-next" (click)="next()">
+    <button class="btn-next" (click)="next()" aria-label="next review">
       <i class="arrow right"></i>
     </button>
     </div>

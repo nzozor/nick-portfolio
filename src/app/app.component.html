@@ -4,10 +4,10 @@
   <benoldi-header ></benoldi-header>
   <div>
     <router-outlet></router-outlet>
-    <div class="scrolltotop" (click)="onClickScroll('scroll-top-anchor')" [class.scrolltotop-show]="showScrollTopButton">
-      <a class="button-circle button-circle-sm button-circle-dark btn-prev">
+    <button aria-label="scroll to top" class="scrolltotop" (click)="onClickScroll('scroll-top-anchor')" [class.scrolltotop-show]="showScrollTopButton">
+      <a title="scroll to top" class="button-circle button-circle-sm button-circle-dark btn-prev">
         <i class="arrow left"></i></a>
-    </div>
+      </button>
   </div>
 </div>
 <benoldi-footer></benoldi-footer>

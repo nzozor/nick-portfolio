@@ -1,9 +1,9 @@
 <div class="header">
   <div class="container-fluid">
     <div class="logo">
-      <h4><a [routerLink]="['']"><img src="../../../assets/images/elsa-benoldi-logo.svg" alt=""></a></h4>
+      <a [routerLink]="['']"><img src="../../../assets/images/elsa-benoldi-logo.svg" alt=""></a>
     </div>
-    <button class="toggle-menu" (click)=toggleMenu()>
+    <button class="toggle-menu" (click)=toggleMenu() aria-label="Toggle Menu">
       <span></span>
     </button>
   </div>

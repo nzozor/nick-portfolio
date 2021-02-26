@@ -36,10 +36,13 @@
     "angular-in-memory-web-api": "^0.11.0",
     "bootstrap": "^4.5.3",
     "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "moment": "^2.29.1",
     "rxjs": "~6.6.0",
     "swiper": "^6.4.10",
     "tslib": "^2.0.0",
     "uuid": "^8.3.2",
+    "xml-js": "^1.6.11",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
