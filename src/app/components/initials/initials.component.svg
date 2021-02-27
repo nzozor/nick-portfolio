@@ -2,17 +2,16 @@
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 923.37 806.04" style="enable-background:new 0 0 923.37 806.04;" xml:space="preserve">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="50%" y2="100%">
-
-      <stop offset="0%" stop-color="#f3f3f3">
-        <animate attributeName="stop-color" values="#f3f3f3; #FCFCFC; #ebebeb; #f3f3f3" dur="12s" repeatCount="indefinite"></animate>
+    <linearGradient _ngcontent-serverApp-c27="" id="grad1" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop _ngcontent-serverApp-c27="" offset="0%" stop-color="#f3f3f3">
+        <animate _ngcontent-serverApp-c27="" attributeName="stop-color" values="#f3f3f3; #fff; #f1f1f1; #f3f3f3" dur="5s" repeatCount="indefinite"></animate>
       </stop>
-
-      <stop offset="100%" stop-color="#FCFCFC">
-        <animate attributeName="stop-color" values="#FCFCFC; #ebebeb;#f3f3f3; #ebebeb;#FCFCFC" dur="12s" repeatCount="indefinite"></animate>
+      <stop _ngcontent-serverApp-c27="" offset="70%" stop-color="#fff">
+        <animate _ngcontent-serverApp-c27="" attributeName="stop-color" values="#fff; #f1f1f1; #ebebeb;#fff" dur="5s" repeatCount="indefinite"></animate>
       </stop>
-
-
+      <stop _ngcontent-serverApp-c27="" offset="100%" stop-color="#fff">
+        <animate _ngcontent-serverApp-c27="" attributeName="stop-color" values="#fff" dur="10s" repeatCount="indefinite"></animate>
+      </stop>
     </linearGradient>
   </defs>
   <g id="Layer_2">

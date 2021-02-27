@@ -1,8 +1,9 @@
 @import "../../scss/helpers/mixins";
 
 .container {
-  margin-top: 133px;
+  margin-top: 85px;
   padding: 0 25px;
+
   @include breakpoint-less(sm) {
     margin-top: 50px;
   }
@@ -10,7 +11,7 @@
 
 h1 {
   font-weight: 100;
-  margin-left: 15px;
+
   @include breakpoint-less(sm) {
     line-height: 1em;
     margin-left: 0;
@@ -21,21 +22,24 @@ h1 {
 h2 {
   font-family: degular;
   font-weight: 500;
-  font-size:1.5em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
 p {
   font-family: Calibre-Light;
   font-size: 1.2em;
-  line-height:1.4em;
+  line-height: 1.4em;
   font-weight: 100;
   margin-top: 20px;
+
   @include breakpoint-less(md) {
     margin-top: 15px;
   }
+
   &.email {
     cursor: pointer;
+
     &::after {
       opacity: 0;
       -webkit-transition: all .5s;
@@ -53,16 +57,20 @@ p {
   }
 }
 
-.where-to-meet, .selfie {
+.where-to-meet,
+.selfie {
   display: flex;
-  > div {
+
+  >div {
     flex-basis: 50%;
     margin: 15px;
   }
 }
 
 .where-to-meet {
-  margin: 80px auto;
+  margin: 0;
+  flex-wrap: wrap;
+  // align-items: center;
 
   @include breakpoint-less(sm) {
     flex-direction: column;
@@ -71,34 +79,62 @@ p {
     margin-top: 45px;
   }
 
-  > div {
+  .social-media {
+    @include breakpoint-above(md) {
+      align-self: center;
+    }
+
+    margin-top: 9px;
+
+    img {
+      max-width: 22px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-top: 25px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+
+  >div {
     margin: 0;
     padding: 15px;
+
     @include breakpoint-less(md) {
       margin-top: 10px;
+
+      &:first-of-type, &:nth-child(3){
+        margin-bottom: 30px;
+      }
+
     }
+
     @include breakpoint-less(sm) {
       margin: 0;
       padding: 0;
     }
-    &:first-of-type {
-      margin-bottom: 30px;
-    }
+
   }
 }
 
 .selfie {
   margin: 15px;
+
   @include breakpoint-less(md) {
     flex-direction: column;
     margin: 25px;
     margin-top: 20px;
   }
-  > div {
-  margin: 15px;
-  @include breakpoint-less(sm) {
-    margin: 10px 0;
-  }
+
+  >div {
+    margin: 15px;
+
+    @include breakpoint-less(sm) {
+      margin: 10px 0;
+    }
+
     img {
       width: 100%;
     }
@@ -106,7 +142,7 @@ p {
 }
 
 benoldi-call-to-action.call-action {
-  ::ng-deep > div {
+  ::ng-deep>div {
     margin-top: 0;
   }
 }
