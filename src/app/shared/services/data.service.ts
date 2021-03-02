@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiService } from './api.service';
 import { ErrorHandleService } from './handle.service';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { Project, Thumbnail } from '../models/project';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -23,9 +24,11 @@ export class DataService {
   }
 
   fetchThumbnailsWorkPage(): Observable<Thumbnail[]> {
-    return this.apiService.get<Project>('',
+    return this.apiService.get<{message: string, thumbnails: Thumbnail[]}>(environment.endpoints.express.url,
       `thumbnails/workpage`).pipe(
-        catchError(err => this.errorHandleService.handleError(err)));
+        catchError(err => this.errorHandleService.handleError(err)),
+        map(data => data.thumbnails)
+        );
   }
 
   fetchProjectDetails(projectId: string): Observable<Project> {

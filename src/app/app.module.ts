@@ -10,7 +10,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from 'src/mock/in-memory-data.service';
+import { environment } from 'src/environments/environment';
 
+const mockModules = [];
+if (environment.mockdata) {
+  mockModules.push(...[
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false, delay: 0 }
+    )
+  ])
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +33,7 @@ import { InMemoryDataService } from 'src/mock/in-memory-data.service';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false, delay: 0 }
-    )
+    ...mockModules
   ],
   providers: [],
   bootstrap: [AppComponent]

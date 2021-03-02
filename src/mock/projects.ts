@@ -53,7 +53,7 @@ export const BENOLDI_PROJECTS: Project[] = [
     projectId: "italy-at-frieze",
     projectName: "Italy at Frieze",
     projectDescription:
-      "Catalogue design for the Italy at Frieze exhibition that was held at the Embassy on Italy in London. The one-of-a-kind event in London was part of the programme of the art fairs Frieze London and Frieze Masters, which draw collectors and art lovers from around the world.",
+      "Catalogue design for Italy at Frieze exhibition that was held at the Embassy on Italy in London. The one-of-a-kind event in London was part of the programme of the art fairs Frieze London and Frieze Masters, which draw collectors and art lovers from around the world.",
     clientName: "Embassy of Italy",
     clientUrl: "",
     services: "Catalogue Design",
