@@ -3,7 +3,7 @@ export const environment = {
   mockdata: true,
   endpoints: {
     express: {
-      url: 'http://localhost:3000/api/v1/',
+      url: '',
       version: 'v1'
     },
   }

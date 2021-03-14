@@ -33,12 +33,14 @@ export class InMemoryDataService implements InMemoryDataService {
   }
 
   get(reqInfo: RequestInfo): Observable<ResponseOptions> {
-    if (reqInfo.url === '/thumbnails/homepage') {
+    if (reqInfo.url.includes('/thumbnails/homepage')) {
       return this.getHomePageThumbnails(reqInfo);
     }
-    if (reqInfo.url === '/thumbnails/workpage') {
+
+    if (reqInfo.url.includes('/thumbnails/workpage')) {
       return this.getWorkThumbnails(reqInfo);
     }
+
     if (reqInfo.url.includes('/projectDetails/next')) {
       return this.getNextProjectDetails(reqInfo);
     }
@@ -46,6 +48,7 @@ export class InMemoryDataService implements InMemoryDataService {
     if (reqInfo.url.includes('/projectDetails/prev')) {
       return this.getPrevProjectDetails(reqInfo);
     }
+
     if (reqInfo.url.includes('/projectDetails')) {
       return this.getProjectDetails(reqInfo);
     }
