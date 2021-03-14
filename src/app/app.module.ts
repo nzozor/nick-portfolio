@@ -18,7 +18,7 @@ if (environment.mockdata) {
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false, delay: 0 }
     )
-  ])
+  ]);
 }
 @NgModule({
   declarations: [
