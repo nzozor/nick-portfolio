@@ -24,7 +24,7 @@ export class homepageComponent implements OnInit {
     {
       assetRef: '../../../assets/images/digital-design.svg',
       title: 'Digital Design',
-      description: 'With experience in UX/UX, I design and develop functional and visually impressive websites and mobile apps.'
+      description: 'With experience in UX/UI, I design and develop functional and visually impressive websites and mobile apps.'
     }
   ];
   $thumbnails: Observable<Thumbnail[]>;
