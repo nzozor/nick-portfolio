@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent implements OnInit {
-  @Input() initials = true;
+  @Input() initials = false;
   constructor() { }
 
   ngOnInit(): void {

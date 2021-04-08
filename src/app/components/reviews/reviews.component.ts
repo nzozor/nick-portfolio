@@ -19,6 +19,10 @@ export class ReviewsComponent implements OnInit {
 
   reviews = [
     {
+      reviewerName: 'Irina Litvinova, Marketing Consultant',
+      quote : 'I’ve been working closely with Elsa for 4 branding projects already and I can highly recommend her as a graphic designer and creative marketing expert. Elsa has an excellent eye for details and great communication skills which makes the work on the project going smooth and efficient. Elsa is great in incorporating current visual trends, brand identity and company’s values so it all strengthens the brand.'
+    },
+    {
       quote : 'It is an absolute joy to work with Elsa. She has a keen eye for design and is most efficient, even when working under extreme pressure. She is most reliable and promptly addresses any issues that may arise in a creative and constructive manner. I cannot recommend her highly enough!',
       reviewerName: 'Flavia Frigeri, Art Historian and Curator'
     },
