@@ -16,11 +16,12 @@
     }
 
     .service-item {
-      border: 1px solid$elsa-gray;
+      // border: 1px solid$elsa-gray;
       min-height: 300px;
       margin-bottom: 25px;
       display: flex;
-      align-items: center;
+      align-items: left;
+      text-align: left;
       flex-direction: column;
       justify-content: center;
       @include breakpoint-above(md) {
@@ -51,7 +52,7 @@
 
         >div {
           font-family: Calibre-Light;
-          text-align: center;
+          text-align: left;
           margin: 20px 23px 0;
           font-size: 1.2em;
           line-height: 1.4em;

@@ -1,5 +1,5 @@
 export interface ServiceItem {
-  assetRef: string;
+  assetRef?: string;
   title: string;
   description: string;
 }

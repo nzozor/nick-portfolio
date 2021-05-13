@@ -8,6 +8,9 @@
   text-align: center;
   width: 40px;
   z-index: 80;
+  @include breakpoint-less(md) {
+    transform: scale(0.7);
+  }
 }
 
 .btn-prev {

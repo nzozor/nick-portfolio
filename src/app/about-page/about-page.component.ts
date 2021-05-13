@@ -15,20 +15,16 @@ export class AboutPageComponent implements OnInit {
 
   items: ServiceItem[] = [
     {
-
-      assetRef: '../../../assets/images/relationship.svg',
-      title: 'Professional Relationship',
-      description: 'Before we start, I want to hear about you and your brand. A memorable brand has a unique story to tell.'
+      title: 'Brand Identity',
+      description: 'From a logo to a complete brand style guide, I build identities that incorporate the voice,values, vision and personality of a business.'
     },
     {
-      assetRef: '../../../assets/images/save-money.svg',
-      title: 'Save money & time',
-      description: 'As a solo entrepreneur, I reduce the costs of a full-service agency. I value working quickly, professionally with effective results.'
+      title: 'Print Design',
+      description: 'I create beautifully designed books, cataloguesand packaging. I’m constantly lookingfor the newest materials and best suppliers.'
     },
     {
-      assetRef: '../../../assets/images/support.svg',
-      title: 'Ongoing Support',
-      description: 'Once your brand is launched, I’ll be happy to provide advice and support on how to best apply and communicate your brand identity.'
+      title: 'Digital Design',
+      description: 'With experience in UX/UI, I design and develop functional and visually impressive websites and mobile apps.'
     }
   ];
   ngOnInit(): void {
