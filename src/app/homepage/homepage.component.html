@@ -4,10 +4,10 @@
     I give shape to their uniqueness by focusing on simplicity.
   </h1>
 </benoldi-hero-section>
+
 <ng-container *ngIf="$thumbnails | async as thumbnails">
   <benoldi-portfolio-section [thumbnails]="thumbnails"></benoldi-portfolio-section>
 </ng-container>
 
-<benoldi-reviews></benoldi-reviews>
-<!-- <benoldi-services [items]="items"></benoldi-services> -->
-<benoldi-call-to-action></benoldi-call-to-action>
+<benoldi-reviews class="benoldi-reviews"></benoldi-reviews>
+<benoldi-call-to-action class="benoldi-call-to-action"></benoldi-call-to-action>

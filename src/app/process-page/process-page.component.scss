@@ -23,8 +23,6 @@
 }
 .process {
   padding: 150px 0;
-  border-bottom: 1px solid #00000036;
-  margin-bottom: 70px;
 
   @include breakpoint-less(sm) {
     padding: 46px 0;
@@ -85,6 +83,9 @@ benoldi-parallax#parallax {
         .img {
           order: 1;
         }
+      }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 

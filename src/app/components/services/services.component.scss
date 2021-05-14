@@ -16,15 +16,15 @@
     }
 
     .service-item {
-      // border: 1px solid$elsa-gray;
-      min-height: 300px;
+      min-height: 150px;
       margin-bottom: 25px;
       display: flex;
       align-items: left;
       text-align: left;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       @include breakpoint-above(md) {
+        min-height: 300px;
         width: 32%;
         margin-right: 30px;
 

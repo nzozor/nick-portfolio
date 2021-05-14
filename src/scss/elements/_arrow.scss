@@ -16,9 +16,8 @@
 .btn-prev {
   left: 0;
   @include breakpoint-less(md) {
-    margin-left: $box-space-sm;
-    margin-right: 10px;
-
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .arrow {
     margin-left: 5px;
@@ -28,8 +27,8 @@
 .btn-next {
   right: 0;
   @include breakpoint-less(md) {
-    margin-right: $box-space-sm;
-    margin-left: 10px
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .arrow {
     margin-right: 5px;
