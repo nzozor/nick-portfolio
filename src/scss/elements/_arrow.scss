@@ -1,4 +1,3 @@
-
 .btn-prev,
 .btn-next {
   margin-top: auto;
@@ -8,17 +7,27 @@
   text-align: center;
   width: 40px;
   z-index: 80;
-  @include breakpoint-less(md) {
-    transform: scale(0.7);
+
+  
+}
+
+.carousel {
+  .btn-prev,
+  .btn-next {
+    @include breakpoint-less(md) {
+      transform: scale(0.7);
+    }
   }
 }
 
 .btn-prev {
   left: 0;
+
   @include breakpoint-less(md) {
     margin-left: 5px;
     margin-right: 5px;
   }
+
   .arrow {
     margin-left: 5px;
   }
@@ -26,10 +35,12 @@
 
 .btn-next {
   right: 0;
+
   @include breakpoint-less(md) {
     margin-left: 5px;
     margin-right: 5px;
   }
+
   .arrow {
     margin-right: 5px;
   }
