@@ -1,6 +1,6 @@
 export const environment = {
-  production: true,
-  mockdata: false,
+  production: false,
+  mockdata: true,
   endpoints: {
     express: {
       url: `http://localhost:3000/api/v1`,
