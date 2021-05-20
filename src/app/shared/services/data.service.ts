@@ -18,11 +18,9 @@ export class DataService {
   ) { }
 
   getAssetsUrl(): string {
-    if (environment.mockdata) {
-      return '';
-    } else {
+
       return environment.endpoints.express.url;
-    }
+    
   }
 
   fetchThumbnailsHomePage(): Observable<Thumbnail[]> {
