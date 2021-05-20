@@ -17,8 +17,16 @@ export class DataService {
     private errorHandleService: ErrorHandleService,
   ) { }
 
+  getAssetsUrl(): string {
+    if (environment.mockdata) {
+      return '';
+    } else {
+      return environment.endpoints.express.url;
+    }
+  }
+
   fetchThumbnailsHomePage(): Observable<Thumbnail[]> {
-    return this.apiService.get<Project>('',
+    return this.apiService.get<Project>(environment.endpoints.express.url,
       `thumbnails/homepage`).pipe(
         catchError(err => this.errorHandleService.handleError(err)));
   }
@@ -32,19 +40,19 @@ export class DataService {
   }
 
   fetchProjectDetails(projectId: string): Observable<Project> {
-    return this.apiService.get<Project>('',
+    return this.apiService.get<Project>(environment.endpoints.express.url,
       `projectDetails/${projectId}`).pipe(
         catchError(err => this.errorHandleService.handleError(err)));
   }
 
   fetchPreviousProjectDetails(projectId: string): Observable<Project> {
-    return this.apiService.get<Project>('',
+    return this.apiService.get<Project>(environment.endpoints.express.url,
       `projectDetails/prev/${projectId}`).pipe(
         catchError(err => this.errorHandleService.handleError(err)));
   }
 
   fetchNextProjectDetails(projectId: string): Observable<Project> {
-    return this.apiService.get<Project>('',
+    return this.apiService.get<Project>(environment.endpoints.express.url,
       `projectDetails/next/${projectId}`).pipe(
         catchError(err => this.errorHandleService.handleError(err)));
   }

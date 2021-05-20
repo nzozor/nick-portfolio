@@ -5,12 +5,12 @@
   >
     <!-- Portfolio Item -->
     <div  class="portfolio-item" benoldiEnterViewport *ngFor="let thumbnail of thumbnails">
-      <a [routerLink]="['/project/', thumbnail.projectId]" >
+      <a [routerLink]="['/project/', thumbnail.projectId]">
         <div class="portfolio-img">
           <picture>
-            <source media="(max-width: 599px)" srcset="{{thumbnail.thumbnailUrlSmall}}">
-            <source media="(min-width: 600px)" srcset="{{thumbnail.thumbnailUrlLarge}}">
-            <img [attr.loading]="loading" src="{{thumbnail.thumbnailUrlLarge}}" alt="{{thumbnail.imgAlt}}">
+            <source media="(max-width: 599px)" srcset="{{assetsUrl +  thumbnail.thumbnailUrlSmall}}">
+            <source media="(min-width: 600px)" srcset="{{assetsUrl + thumbnail.thumbnailUrlLarge}}">
+            <img [attr.loading]="loading" src="{{assetsUrl + thumbnail.thumbnailUrlLarge}}" alt="{{thumbnail.imgAlt}}">
           </picture>
         </div>
         <div class="portfolio-hover">

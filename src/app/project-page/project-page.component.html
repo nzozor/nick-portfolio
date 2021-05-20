@@ -5,9 +5,9 @@
   </benoldi-hero-section>
   <div benoldiEnterViewport class="container" >
       <picture>
-        <source media="(max-width: 599px)" srcset="{{project.mainImgUrlSmall}}">
-        <source media="(min-width: 600px)" srcset="{{project.mainImgUrlLarge}}">
-        <img src="{{project.mainImgUrlLarge}}" alt="{{project.imgAlt}}">
+        <source media="(max-width: 599px)" srcset="{{assetsUrl + project.mainImgUrlSmall}}">
+        <source media="(min-width: 600px)" srcset="{{assetsUrl + project.mainImgUrlLarge}}">
+        <img src="{{assetsUrl + project.mainImgUrlLarge}}" alt="{{assetsUrl + project.imgAlt}}">
       </picture>
     <div class="project-insights">
       <div>
@@ -25,7 +25,7 @@
       <div *ngIf="project.clientUrl; else countryBlock">
         <h3>Project website</h3>
         <p>
-          <a href="{{project.clientUrl}}" target="_blank">visit</a>
+          <a href="{{assetsUrl + project.clientUrl}}" target="_blank">visit</a>
         </p>
       </div>
       <ng-template #countryBlock >
@@ -40,9 +40,9 @@
     <div class="gallery">
       <div benoldiEnterViewport class="item" *ngFor="let item of project.galleryImgs" [ngClass]="imageTypeClass(item)">
         <picture>
-          <source media="(max-width: 599px)" srcset="{{item.smallImgUrl}}">
-          <source media="(min-width: 600px)" srcset="{{item.largeImgUrl}}">
-          <img src="{{item.largeImgUrl}}" alt="{{item.imgAlt}}">
+          <source media="(max-width: 599px)" srcset="{{assetsUrl + item.smallImgUrl}}">
+          <source media="(min-width: 600px)" srcset="{{assetsUrl + item.largeImgUrl}}">
+          <img src="{{assetsUrl + item.largeImgUrl}}" alt="{{assetsUrl + item.imgAlt}}">
         </picture>
       </div>
     </div>

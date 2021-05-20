@@ -13,6 +13,7 @@ export interface Project {
   clientUrl?: string;
   country?: string;
   imgAlt?: string;
+  id?: string;
 }
 
 export interface GalleryImg {
@@ -23,4 +24,4 @@ export interface GalleryImg {
   type: 'full'  |  'half';
 }
 
-export type Thumbnail = Pick<Project, 'projectName' |'thumbnailUrlLarge' | 'thumbnailUrlSmall'| 'imgAlt' | 'projectId'>;
+export type Thumbnail = Pick<Project, 'projectName' |'thumbnailUrlLarge' | 'thumbnailUrlSmall'| 'imgAlt' | 'projectId' | 'id'>;

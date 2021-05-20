@@ -22,16 +22,6 @@ export class InMemoryDataService implements InMemoryDataService {
     this.projects = BENOLDI_PROJECTS;
    }
 
-  post(reqInfo: RequestInfo): void{
-    if (reqInfo.collectionName === 'api/project-list/homepage') {
-
-    }
-
-    if (reqInfo.collectionName === 'api/project-list/work') {
-
-    }
-  }
-
   get(reqInfo: RequestInfo): Observable<ResponseOptions> {
     if (reqInfo.url.includes('/thumbnails/homepage')) {
       return this.getHomePageThumbnails(reqInfo);
