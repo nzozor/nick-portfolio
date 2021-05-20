@@ -7,5 +7,4 @@ export const environment = {
       version: 'v1'
     },
   }
-
 };
