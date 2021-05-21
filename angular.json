@@ -26,7 +26,6 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "disableHostCheck": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
