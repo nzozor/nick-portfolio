@@ -5702,7 +5702,7 @@ exports.ids = [6], exports.modules = {
         this.shouldInitialize && this.setup(), this.swiperWrapper && this.slideCount !== this.swiperWrapper.childElementCount && (this.slideCount = this.swiperWrapper.childElementCount, this.swiper.update())
       }
       ngOnDestroy() {
-        if(this.swiper) {
+        if (this.swiper) {
           this.swiper.destroy(!0, !0)
         }
       }
