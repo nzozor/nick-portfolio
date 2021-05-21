@@ -1,10 +1,11 @@
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import SwiperCore, {
-  Pagination,
+  Pagination, SwiperOptions,
 } from 'swiper/core';
 import { DOCUMENT } from '@angular/common';
 
 SwiperCore.use([Pagination]);
+
 
 @Component({
   selector: 'benoldi-reviews',
@@ -16,6 +17,15 @@ export class ReviewsComponent implements OnInit {
   @ViewChild('start') start: ElementRef;
   @ViewChild('slickModal') slickModal: any;
   @ViewChild('carousel') myCarousel: any;
+  @ViewChild('swiper') swiper: any;
+
+  config: SwiperOptions = {
+    spaceBetween: 30,
+    slidesPerView: 1,
+    pagination: { el: '.swiper-pagination', clickable: true, type: 'bullets', },
+    autoHeight: true,
+    loop: true
+  };
 
   reviews = [
     {

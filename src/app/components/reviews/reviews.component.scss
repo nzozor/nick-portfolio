@@ -106,13 +106,14 @@
 #carousel {
   display: flex;
   width: 100%;
-
+  justify-content: center;
   @include breakpoint-less(md) {
     margin: 0 20px;
   }
 
   swiper {
     margin-right: 0;
+    width: 80%;
 
     @include breakpoint-above(md) {
       margin: 0 30px;

@@ -33,7 +33,7 @@ if (environment.mockdata) {
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    ...mockModules
+    ...mockModules,
   ],
   providers: [],
   bootstrap: [AppComponent]

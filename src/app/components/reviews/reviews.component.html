@@ -3,26 +3,25 @@
   <div class="row">
 
     <div id="carousel" class="carousel">
+      
       <button aria-label="previous preview" class="btn-prev" (click)="prev()">
         <i class="arrow left"></i>
       </button>
-      <swiper class="swiper-container" #swiper
-      [slidesPerView]="1"
-      [spaceBetween]="0"
-      [pagination]="{ clickable: true }"
-      [autoHeight]="true"
-      [loop]="true"
-
-    >
-      <ng-template swiperSlide  *ngFor="let review of reviews">
-        <div class="carousel-cell">
-          <div >
-            <div class="quote">"{{ review.quote }}"</div>
-            <div class="name">{{ review.reviewerName }}</div>
+      <swiper  [config]="config" #swiper>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" swiperSlide *ngFor="let review of reviews">
+            <div class="carousel-cell">
+              <div >
+                <div class="quote">"{{ review.quote }}"</div>
+                <div class="name">{{ review.reviewerName }}</div>
+              </div>
+            </div>
           </div>
+
         </div>
-      </ng-template>
-    </swiper>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </swiper> 
     <button class="btn-next" (click)="next()" aria-label="next review">
       <i class="arrow right"></i>
     </button>
