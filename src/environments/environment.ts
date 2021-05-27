@@ -8,6 +8,7 @@ export const environment = {
   endpoints: {
     express: {
       url: 'api',
+      // url: `https://167.99.200.71:3000/api/v1`,
       version: 'v1'
     },
   }

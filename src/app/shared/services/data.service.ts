@@ -35,7 +35,6 @@ export class DataService {
     return this.apiService.get<{message: string, thumbnails: Thumbnail[]}>(environment.endpoints.express.url,
       `thumbnails/workpage`).pipe(
         catchError(err => this.errorHandleService.handleError(err)),
-        map(data => data.thumbnails)
         );
   }
 

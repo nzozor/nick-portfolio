@@ -107,10 +107,7 @@ export class InMemoryDataService implements InMemoryDataService {
     }));
     return reqInfo.utils.createResponse$((): ResponseOptions => {
       const options: ResponseOptions = {
-        body: {
-          message: 'Thumbnails fetched successfully',
-          thumbnails
-        },
+        body: thumbnails,
         status: 200
       };
       return this.finishOptions(options, reqInfo);
