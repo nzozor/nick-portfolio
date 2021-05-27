@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Thumbnail } from '../shared/models/project';
 import { DataService } from '../shared/services/data.service';
 
@@ -8,19 +8,12 @@ import { DataService } from '../shared/services/data.service';
   templateUrl: './work-page.component.html',
   styleUrls: ['./work-page.component.scss']
 })
-export class WorkPageComponent implements OnInit, OnDestroy {
+export class WorkPageComponent implements OnInit {
 
-  thumbnails: Thumbnail[];
-  sub: Subscription;
+  $thumbnails: Observable<Thumbnail[]>;
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.sub = this.dataService.fetchThumbnailsWorkPage().subscribe(data =>  this.thumbnails = data);
-  }
-
-  ngOnDestroy(): void {
-    if (this.sub) {
-      this.sub.unsubscribe();
-    }
+    this.$thumbnails = this.dataService.fetchThumbnailsWorkPage();
   }
 }
