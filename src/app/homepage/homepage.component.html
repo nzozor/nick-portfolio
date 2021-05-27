@@ -5,7 +5,7 @@
   </h1>
 </benoldi-hero-section>
 
-<ng-container *ngIf="$thumbnails | async as thumbnails">
+<ng-container *ngIf="thumbnails$ | async as thumbnails">
   <benoldi-portfolio-section [thumbnails]="thumbnails"></benoldi-portfolio-section>
 </ng-container>
 

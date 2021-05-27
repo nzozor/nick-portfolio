@@ -10,10 +10,10 @@ import { DataService } from '../shared/services/data.service';
 })
 export class WorkPageComponent implements OnInit {
 
-  $thumbnails: Observable<Thumbnail[]>;
+  thumbnails$: Observable<Thumbnail[]>;
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.$thumbnails = this.dataService.fetchThumbnailsWorkPage();
+    this.thumbnails$ = this.dataService.fetchThumbnailsWorkPage();
   }
 }
