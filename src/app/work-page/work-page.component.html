@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Work</h1>
-  <ng-container *ngIf="$thumbnails | async as thumbnails">
+  <ng-container *ngIf="thumbnails">
     <benoldi-portfolio-section id="work" [thumbnails]="thumbnails" [loading]="'lazy'"></benoldi-portfolio-section>
   </ng-container>
   <benoldi-call-to-action class="call-action"></benoldi-call-to-action>
