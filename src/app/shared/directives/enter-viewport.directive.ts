@@ -1,36 +1,62 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterContentInit, AfterViewInit, Directive, ElementRef, EventEmitter, Host, HostBinding, Inject, Output, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, EventEmitter, , HostBinding, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
 
 @Directive({
   selector: '[benoldiEnterViewport]'
 })
-export class EnterViewportDirective implements AfterContentInit {
-  @Output() visibilityChange: EventEmitter<string> = new EventEmitter<string>();
-  private _observer: IntersectionObserver;
+export class EnterViewportDirective  implements OnDestroy, OnInit, AfterViewInit {
+  @Input() threshold = 0;
+
+  @Output() visible = new EventEmitter<HTMLElement>();
   @HostBinding('class') elementVisibilityClass: string;
+  private observer: IntersectionObserver | undefined;
 
-  constructor(@Host() private _elementRef: ElementRef, @Inject(PLATFORM_ID) private plateformId: {}) { }
-  ngAfterContentInit(): void {
+
+  constructor(private element: ElementRef, @Inject(PLATFORM_ID) private plateformId: {}) {}
+
+  ngOnInit(): void {
     if (isPlatformBrowser(this.plateformId)) {
-      const options = { root: null, rootMargin: "0px", threshold: 0.0 };
-      this._observer = new IntersectionObserver(this._callback, options);
-      this._observer.observe(this._elementRef.nativeElement);
-      this.elementVisibilityClass = 'enter-view-port hidden';
-
+      this.createObserver();
     }
   }
 
-  ngOnDestroy() {
-    if (isPlatformBrowser(this.plateformId)) {
-      this._observer.disconnect();
+  ngAfterViewInit(): void {
+    this.startObservingElements();
+  }
+
+  ngOnDestroy(): void {
+    if (this.observer) {
+      this.observer.disconnect();
+      this.observer = undefined;
     }
   }
 
-  private _callback = (entries: any) => {
-      entries.forEach((entry: any) => {
+  private createObserver(): void {
+    const options = {
+      rootMargin: '0px',
+      threshold: this.threshold,
+    };
 
-        this.visibilityChange.emit(entry.isIntersecting ? 'enter-view-port visible' : 'enter-view-port hidden');
-        this.elementVisibilityClass = entry.isIntersecting ? 'enter-view-port visible' : ' enter-view-port hidden';
+    const isIntersecting = (entry: IntersectionObserverEntry) =>
+      entry.isIntersecting || entry.intersectionRatio > 0;
+
+    this.observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (isIntersecting(entry)) {
+          this.elementVisibilityClass = 'enter-view-port visible';
+        } else {
+          this.elementVisibilityClass = 'enter-view-port';
+        }
       });
+    }, options);
+  }
+
+  private startObservingElements(): void {
+    if (!this.observer) {
+      return;
     }
+
+    this.elementVisibilityClass = 'enter-view-port hide-item';
+    this.observer.observe(this.element.nativeElement);
+  }
 }

@@ -57,7 +57,9 @@
 
         .portfolio-img {
           position: relative;
-
+          overflow: hidden;
+          min-width: 100px;
+          width: 100%;
           picture {
             line-height: 0;
             font-size: 0;
