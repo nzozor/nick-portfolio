@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { AfterViewInit, Directive, ElementRef, EventEmitter, , HostBinding, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, EventEmitter, HostBinding, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID } from '@angular/core';
 
 @Directive({
   selector: '[benoldiEnterViewport]'
