@@ -96,6 +96,7 @@
 
             * {
               font-family: degular;
+              font-family: 'Tomorrow', sans-serif;
               @include transform(translateY(10px));
               opacity: 0;
               @include transition(ease-out 0.14s);

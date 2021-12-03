@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ContactPageRoutingModule } from './contact-page-routing.module';
 import { ContactPageComponent } from './contact-page.component';
 import { CallToActionModule } from '../shared/modules/call-to-action/call-to-action.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { CallToActionModule } from '../shared/modules/call-to-action/call-to-act
     CommonModule,
     ContactPageRoutingModule,
     CallToActionModule,
+    FontAwesomeModule
   ]
 })
 export class ContactPageModule { }

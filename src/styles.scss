@@ -3,7 +3,9 @@
 @import '~swiper/components/pagination/pagination.min.css';
 @import "https://use.typekit.net/ytk1pbi.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,400;1,300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Tomorrow:ital,wght@0,400;1,300&display=swap');
 @import "./scss/main";
 
 @font-face {
@@ -14,4 +16,19 @@
 @font-face {
   font-family: 'Calibre-Light';
   src: url('./assets/font-calibre/Calibre-Light.woff'); /* IE9 Compat Modes */
+}
+
+benoldi-root {
+  .wrapper.contact-page {
+    background-color: #FF4C3A;
+  }
+  benoldi-footer {
+    * {
+      color: black!important;
+    }
+    > div {
+      margin-top: 7%;
+      background-color: #FF4C3A!important;
+    }
+  }
 }

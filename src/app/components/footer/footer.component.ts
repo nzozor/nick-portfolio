@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'benoldi-footer',
@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
   faTwitter = faTwitter;
   faInstagramSquare = faInstagram;
   faLinkedinIn = faLinkedinIn;
-
+  faGithub = faGithub;
   constructor() { }
 
   ngOnInit(): void {

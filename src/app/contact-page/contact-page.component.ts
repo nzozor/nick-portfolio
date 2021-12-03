@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
-
+import {  faGithub } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'benoldi-contact-page',
   templateUrl: './contact-page.component.html',
@@ -10,6 +10,7 @@ export class ContactPageComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) { }
   showSnackBar = false;
+  faGithub = faGithub;
   ngOnInit(): void {
   }
 
@@ -19,7 +20,7 @@ export class ContactPageComponent implements OnInit {
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    selBox.value = 'elsabenoldi@gmail.com';
+    selBox.value = 'nzozor@gmail.com';
     this.document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();

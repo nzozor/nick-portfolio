@@ -2,6 +2,7 @@ import { ViewportScroller } from '@angular/common';
 import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { filter} from 'rxjs/operators';
 
 @Component({
   selector: 'benoldi-root',
@@ -14,7 +15,8 @@ export class AppComponent implements OnInit {
   faArrowUp = faArrowUp;
   showScrollTopButton = false;
   initialPos = 0;
-  constructor(private viewportScroller: ViewportScroller) { }
+  isContactPage = false;
+  constructor(private viewportScroller: ViewportScroller,private router: Router ) { }
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(): void {
     // In chrome and some browser scroll is given to body tag
@@ -29,6 +31,15 @@ export class AppComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(res => {
+      if (this.router.url === '/contact') {
+        this.isContactPage = true;
+      } else {
+        this.isContactPage = false;
+      }
+    });
   }
 
   onClickScroll(elementId: string): void {

@@ -13,18 +13,18 @@ export class homepageComponent implements OnInit {
   items: ServiceItem[] = [
     {
       assetRef: '../../../assets/images/brand-identity.svg',
-      title: 'Brand Identity',
-      description: 'From a logo to a complete brand style guide, I build identities that incorporate the personality of a business.'
+      title: 'Website design and development',
+      description: ''
     },
     {
       assetRef: '../../../assets/images/print-design.svg',
-      title: 'Print Design',
-      description: 'I create beautifully designed books, catalogues and packaging using the finest paper stocks and finishes.'
+      title: 'Desktop and mobile app applications',
+      description: ''
     },
     {
       assetRef: '../../../assets/images/digital-design.svg',
-      title: 'Digital Design',
-      description: 'With experience in UX/UI, I design and develop functional and visually impressive websites and mobile apps.'
+      title: 'Web marketing strategy',
+      description: ''
     }
   ];
   thumbnails$: Observable<Thumbnail[]>;

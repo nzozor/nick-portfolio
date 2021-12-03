@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'benoldi-fullscreen-menu',
@@ -13,7 +13,7 @@ export class FullscreenMenuComponent implements OnInit {
   faTwitter = faTwitter;
   faInstagramSquare = faInstagram;
   faLinkedinIn = faLinkedinIn;
-
+  faGithub = faGithub;
   constructor() { }
 
   ngOnInit(): void {

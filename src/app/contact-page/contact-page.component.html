@@ -1,44 +1,58 @@
-<div class="container">
+<div class="container contact">
   <div class="where-to-meet">
     <div>
-      <h1>Let's work together</h1>
+      <h1>Let's catch up</h1>
     </div>
     <div class="social-media">
-      <a title="go to Instagram" href=" https://www.instagram.com/elsabenoldi_design/" target="_blank">
-        <img src="../../assets/images/instagram-elsabenoldi.svg" alt="instagram Elsa Benoldi">
+      <a
+        title="go to gitHub"
+        class="button-circle github"
+        href="https://github.com/nzozor"
+        target="_blank"
+      >
+        <fa-icon [icon]="faGithub"></fa-icon>
       </a>
-      <a title="go to LinkedIn"  href="https://www.linkedin.com/in/elsabenoldi/" target="_blank">
-        <img src="../../assets/images/linkedIn-elsa-benoldi.svg" alt="LinkedIn Elsa Benoldi">
-
+      <a
+        title="go to LinkedIn"
+        href="https://www.linkedin.com/in/nick-zozor/"
+        target="_blank"
+      >
+        <img
+          src="../../assets/images/linkedIn-elsa-benoldi.svg"
+          alt="LinkedIn Nick Zozr"
+        />
       </a>
+    </div>
+  </div>
+  <div class="selfie">
+    <div class="contact-details">
+      <div>
+        <h2>Email</h2>
+        <p class="email" (click)="copyToClipBoard()">nzozor@gmail.com</p>
+        <div id="snackbar" [class.show]="showSnackBar">
+          Tracks digital email address copied to clipboard!
+        </div>
+      </div>
+      <div>
+        <h2>Where to meet me</h2>
+        <p>I'm currently based in London but we can work from everywhere</p>
+      </div>
     </div>
     <div>
-      <h2>Email</h2>
-      <p class="email" (click)="copyToClipBoard()">elsabenoldi@gmail.com</p>
-      <div id="snackbar" [class.show]="showSnackBar">Elsa email address copied to clipboard!</div>
-
+      <picture>
+        <source
+          media="(max-width: 599px)"
+          srcset="assets/images/contact/binocular.jpg"
+        />
+        <source
+          media="(min-width: 600px)"
+          srcset="assets/images/contact/binocular.jpg"
+        />
+        <img
+          src="assets/images/contact/binocular.jpg"
+          alt="Nick Zozr Web developer"
+        />
+      </picture>
     </div>
-    <div>
-      <h2>Where to meet me</h2>
-      <p>I'm currently based in London and occasionally you'll find me in my Italian studio in Parma.</p>
-    </div>
-  </div>
-
-</div>
-<div class="selfie">
-  <div>
-    <picture>
-      <source media="(max-width: 599px)" srcset="assets/images/contact/elsa-benoldi-graphic-design-agency.jpg">
-      <source media="(min-width: 600px)" srcset="assets/images/contact/elsa-benoldi-graphic-design-agency.jpg">
-      <img src="assets/images/contact/elsa-benoldi-graphic-design-agency.jpg" alt="Elsa Benoldi Graphic Design Agency">
-    </picture>
-  </div>
-  <div>
-    <picture>
-      <source media="(max-width: 599px)" srcset="assets/images/contact/elsa-benoldi-graphic-design-pantone.jpg">
-      <source media="(min-width: 600px)" srcset="assets/images/contact/elsa-benoldi-graphic-design-pantone.jpg">
-      <img src="assets/images/contact/elsa-benoldi-graphic-design-pantone.jpg" alt="Elsa benoldi Graphic Design pantone">
-    </picture>
   </div>
 </div>
-<benoldi-call-to-action class="call-action"></benoldi-call-to-action>

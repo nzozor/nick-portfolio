@@ -40,7 +40,13 @@
 
 		a {
 			color: $color-dark;
+      text-decoration: none;
+
 			&:hover { color: $color-dark; }
+      span {
+        font-family: 'Secular One', sans-serif;
+        font-size: 1.8em;
+      }
 		}
   }
   &.fixed {

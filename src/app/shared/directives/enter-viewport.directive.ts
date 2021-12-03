@@ -4,7 +4,7 @@ import { AfterViewInit, Directive, ElementRef, EventEmitter, HostBinding, Inject
 @Directive({
   selector: '[benoldiEnterViewport]'
 })
-export class EnterViewportDirective  implements OnDestroy, OnInit, AfterViewInit {
+export class EnterViewportDirective implements OnDestroy, OnInit, AfterViewInit {
   @Input() threshold = 0;
 
   @Output() visible = new EventEmitter<HTMLElement>();
@@ -12,7 +12,7 @@ export class EnterViewportDirective  implements OnDestroy, OnInit, AfterViewInit
   private observer: IntersectionObserver | undefined;
 
 
-  constructor(private element: ElementRef, @Inject(PLATFORM_ID) private plateformId: {}) {}
+  constructor(private element: ElementRef, @Inject(PLATFORM_ID) private plateformId: {}) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.plateformId)) {
@@ -43,9 +43,13 @@ export class EnterViewportDirective  implements OnDestroy, OnInit, AfterViewInit
     this.observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (isIntersecting(entry)) {
-          this.elementVisibilityClass = 'enter-view-port visible';
+          setTimeout(() => {
+            this.elementVisibilityClass = 'enter-view-port visible';
+          }, 50);
         } else {
-          this.elementVisibilityClass = 'enter-view-port';
+          setTimeout(() => {
+            this.elementVisibilityClass = 'enter-view-port';
+          }, 50);
         }
       });
     }, options);

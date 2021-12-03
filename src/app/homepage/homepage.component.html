@@ -1,13 +1,12 @@
 <benoldi-hero-section>
   <h1>
-    I help curious growing businesses to build their identity. <br class="divider" />
-    I give shape to their uniqueness by focusing on simplicity.
+    I help businesses to build unique web solutions. <br class="divider" />
+    I focus on simplicity, performance and security.
   </h1>
 </benoldi-hero-section>
-
 <ng-container *ngIf="thumbnails$ | async as thumbnails">
   <benoldi-portfolio-section [thumbnails]="thumbnails"></benoldi-portfolio-section>
 </ng-container>
-
-<benoldi-reviews class="benoldi-reviews"></benoldi-reviews>
+<!-- <h3>Services</h3>
+<benoldi-services [items]="items" class="services"></benoldi-services> -->
 <benoldi-call-to-action class="benoldi-call-to-action"></benoldi-call-to-action>
