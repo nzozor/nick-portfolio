@@ -1,5 +1,5 @@
 {
-  "name": "elsa-website",
+  "name": "nick-website",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,11 +11,11 @@
     "e2e": "ng e2e",
     "build:prod": "npm build:ssr",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
-    "serve:ssr": "node dist/elsa-website/server/main.js",
-    "build:ssr": "ng build --prod && ng run elsa-website:server:production",
-    "build:client-and-server-bundles": "ng build --prod --aot && ng run elsa-website:server:production --bundleDependencies all",
-    "dev:ssr": "ng run elsa-website:serve-ssr",
-    "prerender": "ng run elsa-website:prerender"
+    "serve:ssr": "node dist/nick-website/server/main.js",
+    "build:ssr": "ng build --prod && ng run nick-website:server:production",
+    "build:client-and-server-bundles": "ng build --prod --aot && ng run nick-website:server:production --bundleDependencies all",
+    "dev:ssr": "ng run nick-website:serve-ssr",
+    "prerender": "ng run nick-website:prerender"
   },
   "private": true,
   "dependencies": {
