@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "elsa-website": {
+    "nick-website": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/elsa-website/browser",
+            "outputPath": "dist/nick-website/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,20 +69,20 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "elsa-website:build",
+            "browserTarget": "nick-website:build",
             "disableHostCheck": true
 
           },
           "configurations": {
             "production": {
-              "browserTarget": "elsa-website:build:production"
+              "browserTarget": "nick-website:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "elsa-website:build"
+            "browserTarget": "nick-website:build"
           }
         },
         "test": {
@@ -120,18 +120,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "elsa-website:serve"
+            "devServerTarget": "nick-website:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "elsa-website:serve:production"
+              "devServerTarget": "nick-website:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/elsa-website/server",
+            "outputPath": "dist/nick-website/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -152,21 +152,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "elsa-website:build",
-            "serverTarget": "elsa-website:server"
+            "browserTarget": "nick-website:build",
+            "serverTarget": "nick-website:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "elsa-website:build:production",
-              "serverTarget": "elsa-website:server:production"
+              "browserTarget": "nick-website:build:production",
+              "serverTarget": "nick-website:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "elsa-website:build:production",
-            "serverTarget": "elsa-website:server:production",
+            "browserTarget": "nick-website:build:production",
+            "serverTarget": "nick-website:server:production",
             "routes": [
               "/"
             ]
@@ -178,7 +178,7 @@
       }
     }
   },
-  "defaultProject": "elsa-website",
+  "defaultProject": "nick-website",
   "cli": {
     "analytics": false
   }

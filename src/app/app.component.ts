@@ -11,7 +11,7 @@ import { filter} from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
 
-  title = 'elsa-website';
+  title = 'nick-website';
   faArrowUp = faArrowUp;
   showScrollTopButton = false;
   initialPos = 0;
