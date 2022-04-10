@@ -118,7 +118,7 @@ p {
       }
     }
 
-    .github {
+    .github, .faLinkedinIn {
       background-color: transparent;
       font-size: 22px;
       margin-right: 10px;
@@ -127,6 +127,7 @@ p {
         ::ng-deep {
           svg {
             margin-bottom: 3px;
+            color: black;
           }
         }
       }

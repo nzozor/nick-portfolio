@@ -1,6 +1,8 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
-import {  faGithub } from '@fortawesome/free-brands-svg-icons';
+import {  faGithub,  faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
+
 @Component({
   selector: 'benoldi-contact-page',
   templateUrl: './contact-page.component.html',
@@ -11,6 +13,7 @@ export class ContactPageComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document) { }
   showSnackBar = false;
   faGithub = faGithub;
+  faLinkedinIn = faLinkedinIn;
   ngOnInit(): void {
   }
 
@@ -31,6 +34,5 @@ export class ContactPageComponent implements OnInit {
   showSnackBarElement() {
     this.showSnackBar = true;
     setTimeout(() => this.showSnackBar = false, 3000);
-
   }
 }
