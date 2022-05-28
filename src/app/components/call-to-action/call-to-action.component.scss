@@ -17,6 +17,7 @@
     font-weight: 200;
     line-height: 1.2;
     font-size: 2.7em;
+    font-family: 'Tomorrow', sans-serif;
 
     @include breakpoint-less(sm) {
       margin-top: 0;
@@ -29,18 +30,18 @@
   max-width: 300px;
   margin: 30px auto;
   font-size: inherit;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
   text-decoration: none;
   background-color: black;
   border: 1px solid black;
   color: white;
   font-family: degular;
-  padding-top: 12px;
+  padding-top: 23px;
   display: flex;
   align-items: center;
   transition: all 0.3s;
-
+  font-family: Calibre-Light;
   @media (hover: hover) {
     &:hover {
       background-color: white;
