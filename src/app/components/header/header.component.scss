@@ -47,6 +47,9 @@
         font-family: 'Secular One', sans-serif;
         font-size: 1.8em;
       }
+      span:last-of-type {
+        color: gray;
+      }
 		}
   }
   &.fixed {
